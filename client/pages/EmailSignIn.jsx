@@ -4,6 +4,7 @@ import { auth } from '../config/firebasecon';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { setGlobalUser } from '../slices/userSlice';
+import { Link } from 'react-router';
 
 
 const EmailSignIn = () => {
@@ -36,6 +37,7 @@ const EmailSignIn = () => {
         <input type="text" placeholder='Password' required ref={userPassword} />
       </span>
       <button onClick={handleEmailSignIn}>Submit</button>
+      <Link to='/password-change'>Forget Password?</Link>
       {error && <span>{error}</span>}
     </form>
   )
