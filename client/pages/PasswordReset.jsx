@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import {confirmPasswordReset} from 'firebase/auth';
 import {auth} from '../config/firebasecon';
 import {useNavigate} from 'react-router';
+import '../pagestyling/PasswordReset.css';
 
 const PasswordReset = () => {
 
@@ -40,13 +41,23 @@ const PasswordReset = () => {
         }
     }
   return (
-    <div>
-        <form onSubmit={e=>e.preventDefault()}>
-            <h1>Enter the new password</h1>
-            <input type="password" placeholder='Password'required ref={userPassword} />
-            {error && <span>{error}</span>}
-            <button onClick={handleReset}>reset</button>
-        </form>
+    <div className='signup-main'>
+        <div className='signup-div-1'>
+            <h1 className='heading' >Welcome to <span className="typing">Smart-Fert</span></h1>
+        </div>
+
+        
+        <div className='signup-div-2'>
+            <div className='content-signup'>
+                <h1 className='signup-text'>Enter the new password</h1>
+                <form onSubmit={e=>e.preventDefault()} className='signup-form'>
+                    <label htmlFor="passreset">New Password</label>
+                    <input type="password" placeholder='Password' id='passreset' required ref={userPassword} />
+                    {error && <span>{error}</span>}
+                    <button onClick={handleReset} className='signup-btn'>Reset</button>
+                </form>
+            </div>
+        </div>
     </div>
   )
 }

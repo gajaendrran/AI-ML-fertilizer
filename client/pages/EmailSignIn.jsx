@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { setGlobalUser } from '../slices/userSlice';
 import { Link } from 'react-router';
-
+import '../pagestyling/EmailSignIn.css';
 
 const EmailSignIn = () => {
   const dispatch = useDispatch();
@@ -29,16 +29,21 @@ const EmailSignIn = () => {
     }
   }
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
-      <span><FaEnvelope />
-        <input type="text" placeholder='E-mail' required ref={userMail} />
-      </span>
-      <span><FaLock />
-        <input type="text" placeholder='Password' required ref={userPassword} />
-      </span>
-      <button onClick={handleEmailSignIn}>Submit</button>
-      <Link to='/password-change'>Forget Password?</Link>
-      {error && <span>{error}</span>}
+    <form onSubmit={(e) => e.preventDefault()} className='form'>
+      <label htmlFor="emailinput"> Email</label>
+      {/* <span> Email<FaEnvelope /> </span> */}
+        <input type="text" placeholder='E-mail' required ref={userMail} id='emailinput' />
+      
+       
+
+      <label htmlFor="passinput">Password</label>
+      {/* <span> <FaLock /></span> */}
+        <input type="text" placeholder='Password' required ref={userPassword} id='passinput' />
+        <Link to='/password-change' className='forget-pass'>Forget Password?</Link>
+        {error && <span>{error}</span>}
+      
+      <button onClick={handleEmailSignIn} className='submit'>Submit</button>
+      
     </form>
   )
 }

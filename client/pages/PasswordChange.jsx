@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import { FaEnvelope } from 'react-icons/fa';
 import {auth} from '../config/firebasecon';
 import {sendPasswordResetEmail} from 'firebase/auth';
+import '../pagestyling/PasswordChange.css';
 
 const PasswordChange = () => {
     const navigate = useNavigate();
@@ -25,16 +26,29 @@ const PasswordChange = () => {
         }
     }
     return (
-        <div>
-            <form onSubmit={e=>e.preventDefault()}>
-                <h1>Change Password!!</h1>
-                <span>
-                    <FaEnvelope />
-                    <input type="text" placeholder='E-mail id' required ref={userMail}/>
-                </span>
-                <button onClick={handleSubmit}>Submit</button>
-            </form>
-            <button onClick={handleCancel}>Cancel</button>
+        <div className='signup-main'> 
+          <div className='signup-div-1'>
+            <h1 className='heading' >Welcome to <span className="typing">Smart-Fert</span></h1>
+          </div>
+
+          <div className='signup-div-2'>
+            <div className='content-signup'>
+                <h1 className='signup-text'>Change Password!!</h1>
+
+                <form onSubmit={e=>e.preventDefault()} className='signup-form'>
+                    
+                    {/* <span><FaEnvelope /></span> */}
+                        <label htmlFor="passchange-email">Email</label>
+                        <input type="text" placeholder='E-mail id' id='passchange-email' required ref={userMail}/>
+                    
+                    <button onClick={handleSubmit} className='signup-btn'>Submit</button>
+                    <button onClick={handleCancel} className='signup-btn'>Cancel</button>
+                </form>
+            </div>
+          </div>
+            
+        
+            
         </div>
     )
 }
