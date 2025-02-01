@@ -3,6 +3,7 @@ import {confirmPasswordReset} from 'firebase/auth';
 import {auth} from '../config/firebasecon';
 import {useNavigate} from 'react-router';
 import '../pagestyling/PasswordReset.css';
+import {FaLock} from 'react-icons/fa';
 
 const PasswordReset = () => {
 
@@ -51,8 +52,8 @@ const PasswordReset = () => {
             <div className='content-signup'>
                 <h1 className='signup-text'>Enter the new password</h1>
                 <form onSubmit={e=>e.preventDefault()} className='signup-form'>
-                    <label htmlFor="passreset">New Password</label>
-                    <input type="password" placeholder='Password' id='passreset' required ref={userPassword} />
+                    <label htmlFor="passreset">New Password<FaLock/></label>
+                    <input type="password" placeholder='' id='passreset' required ref={userPassword} />
                     {error && <span>{error}</span>}
                     <button onClick={handleReset} className='signup-btn'>Reset</button>
                 </form>

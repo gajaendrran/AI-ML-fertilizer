@@ -72,10 +72,8 @@ body{
 }
 .content-signup{
     width: 600px;
-    
     background-color: #FFFAFA ;
     border-radius: 10px;
-    
     margin-top: 10px;  
     box-shadow: #007bff;
     margin-bottom: 20px;
@@ -90,9 +88,7 @@ body{
     color: var(--primary-color);
     text-align: center;
     font-size: xx-large;
-    /* color: #4CAF50; */
-    animation: glowPulse 2s infinite alternate;
-    text-decoration: underline;
+    animation: fadeIn 1.3s ease-in-out infinite alternate;
 }
 
 .signup-form{
@@ -105,10 +101,11 @@ body{
     border-radius: 8px;
     max-width: 400px;
     margin: auto;
+
 }
 .signup-form label{
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #2a2a2a;
     margin-bottom: -3px;
     margin-left: -7px;
@@ -125,10 +122,18 @@ body{
     background-color: transparent;
     border-width: 1px;
   }
-  .signup-form input:focus{
-    outline: none;
+  .signup-form label svg {
+    font-size: 18px;
+    transform: translateY(3px);
   }
-
+  .signup-form input:focus{
+    outline: none;    
+    border: 2px solid var(--primary-color);
+    background-color: #f0f8ff
+  }
+  .signup-form input:focus + .signup-form label svg {
+    color: var(--secondary-color);  /* Changes the icon color on focus */
+}
 .signup-btn{
     padding: 10px 15px;
     

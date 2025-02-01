@@ -38,8 +38,8 @@ const PasswordChange = () => {
                 <form onSubmit={e=>e.preventDefault()} className='signup-form'>
                     
                     {/* <span><FaEnvelope /></span> */}
-                        <label htmlFor="passchange-email">Email</label>
-                        <input type="text" placeholder='E-mail id' id='passchange-email' required ref={userMail}/>
+                        <label htmlFor="passchange-email">E-mail<FaEnvelope /></label>
+                        <input type="text" placeholder='' id='passchange-email' required ref={userMail}/>
                     
                     <button onClick={handleSubmit} className='signup-btn'>Submit</button>
                     <button onClick={handleCancel} className='signup-btn'>Cancel</button>

@@ -11,7 +11,7 @@ const EmailSignIn = () => {
   const dispatch = useDispatch();
   const userMail = useRef();
   const userPassword = useRef();
-  const [error,setError] = useState();
+  const [error, setError] = useState();
 
   async function handleEmailSignIn() {
     setError(null);
@@ -30,20 +30,20 @@ const EmailSignIn = () => {
   }
   return (
     <form onSubmit={(e) => e.preventDefault()} className='form'>
-      <label htmlFor="emailinput"> Email</label>
-      {/* <span> Email<FaEnvelope /> </span> */}
-        <input type="text" placeholder='E-mail' required ref={userMail} id='emailinput' />
-      
-       
 
-      <label htmlFor="passinput">Password</label>
-      {/* <span> <FaLock /></span> */}
-        <input type="text" placeholder='Password' required ref={userPassword} id='passinput' />
-        <Link to='/password-change' className='forget-pass'>Forget Password?</Link>
-        {error && <span>{error}</span>}
-      
+      { <label htmlFor="emailinput"> E-mail<FaEnvelope /></label>}
+{/*       <span className="icon"><FaEnvelope /> </span>
+ */}      <input type="text" placeholder='' required ref={userMail} id='emailinput' />
+
+      <label htmlFor="passinput">Password<FaLock /></label>      
+{/*       <span> </span>
+ */}      <input type="password" placeholder='' required ref={userPassword} id='passinput' />
+
+      <Link to='/password-change' className='forget-pass'>Forget Password?</Link>
+      {error && <span>{error}</span>}
+
       <button onClick={handleEmailSignIn} className='submit'>Submit</button>
-      
+
     </form>
   )
 }

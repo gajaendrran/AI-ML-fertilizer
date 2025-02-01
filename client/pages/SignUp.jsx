@@ -3,6 +3,7 @@ import { FaEnvelope, FaLock, FaUserCircle } from 'react-icons/fa';
 import { auth } from "../config/firebasecon";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router';
+import {Link} from 'react-router'
 import '../pagestyling/SignUp.css';
 const SignUp = () => {
     const userName = useRef();
@@ -10,9 +11,6 @@ const SignUp = () => {
     const userPassword = useRef();
     const navigate = useNavigate();
 
-    function handleCancel() {
-        navigate("/");
-    }
     async function handleEmailSignUp() {
         const mail = userMail.current.value;
         const password = userPassword.current.value;
@@ -35,24 +33,25 @@ const SignUp = () => {
 
             <div className='signup-div-2'>
                 <div className='content-signup'>
-                    <h2 className='signup-text'>Sign Up!</h2>
+                    <h2 className='signup-text'>Sign Up</h2>
                     <form onSubmit={(e) => e.preventDefault()} className='signup-form'>
-                        <label htmlFor="signup-name">Name</label>
+                        <label htmlFor="signup-name">Name<FaUserCircle /></label>
                         {/* <span><FaUserCircle /></span> */}
-                            <input type="text" placeholder='Name' id='signup-name' required ref={userName} />
+                            <input type="text" placeholder='' id='signup-name' required ref={userName} />
 
 
-                        <label htmlFor="signup-email">Email</label> 
+                        <label htmlFor="signup-email">Email<FaEnvelope /></label> 
                         {/* <span><FaEnvelope /></span> */}
-                            <input type="text" placeholder='E-mail' id='signup-name' required ref={userMail} />
+                            <input type="text" placeholder='' id='signup-name' required ref={userMail} />
 
 
-                        <label htmlFor="signup-pass">Password</label>
+                        <label htmlFor="signup-pass">Password<FaLock /></label>
                         {/* <span><FaLock /></span> */}
-                            <input type="text" placeholder='Password'  id='signup-pass' required ref={userPassword} />
+                            <input type="password" placeholder=''  id='signup-pass' required ref={userPassword} />
                         
                     <button onClick={handleEmailSignUp} className='signup-btn'>Submit</button>
-                    <button onClick={handleCancel} className='signup-btn'>cancel</button>
+
+                    <center> <h4 >Account Exists?<span className='signup'><Link to="/"> SignIn</Link></span></h4> </center>
                     </form>
                 </div>
             </div>
@@ -61,5 +60,4 @@ const SignUp = () => {
         </div>
     )
 }
-
 export default SignUp
