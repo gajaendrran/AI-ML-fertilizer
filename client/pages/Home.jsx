@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { removeGlobaluser } from '../slices/userSlice';
 import { useDispatch } from 'react-redux';
 import { signOut } from 'firebase/auth';
@@ -13,6 +14,8 @@ const Home = () => {
   return (
     <div>
       <h1>Welcome</h1>
+
+        <Link to="./ferti-form"> Use SmartFert AI </Link>
       <button onClick={logOut}>Log out</button>
     </div>
   )
