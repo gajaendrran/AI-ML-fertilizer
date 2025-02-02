@@ -6,11 +6,11 @@ import { signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from 'firebas
 import { useDispatch } from 'react-redux';
 import { setGlobalUser } from '../slices/userSlice';
 import { Link } from 'react-router';
-
+import '../pagestyling/SignIn.css';
 const SignIn = () => {
 
   const [method, setMethod] = useState("load");
-  const [error,setError] = useState();
+  const [error, setError] = useState();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -39,16 +39,45 @@ const SignIn = () => {
   }
   return (
     <div>
-      {method === "load" && <div><span>Loading...</span></div>}
+      {method === "load" &&
+        <div class="parent-loading">
+          <h2>Loading...</h2>
+          <div class="loadingspinner">
+            <div id="square1"></div>
+            <div id="square2"></div>
+            <div id="square3"></div>
+            <div id="square4"></div>
+            <div id="square5"></div>
+          </div>
+        </div>}
+
+
       {!method && (
-        <div>
-          <h1>Welcome to Smart-Fert</h1>
-          <h2>Sign In to continue..</h2>
-          <EmailSignIn />
-          <span>or</span>
-          <button onClick={googleSignIn}>Google<FaGoogle /></button>
-          <span><Link to="/signup">Signup</Link></span>
-          {error && <span>{error}</span>}
+        <div className='main'>
+          <div className='div-1'>
+            <h1 className='heading' >Welcome to <span className="typing">Smart-Fert</span></h1>
+
+          </div>
+
+
+          <div className='div-2'>
+            <div className='signin'>
+              <h2 className='signin-text'>Sign In </h2>
+              <EmailSignIn />
+
+              <div className='or-con'>
+                 <span>or</span>
+              </div>
+
+              <div className='google-continue'>
+                <button onClick={googleSignIn} className='btn-google'>Continue with Google<FaGoogle /></button>
+              </div>
+              
+              <center> <h4 >New Here? <span className='signup'><Link to="/signup">Signup</Link></span></h4> </center>
+
+              {error && <span>{error}</span>}
+            </div>
+          </div>
         </div>
       )}
     </div>

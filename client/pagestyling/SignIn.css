@@ -1,0 +1,513 @@
+
+:root {
+  --primary-color: #17B169;  /* pacha */
+  --secondary-color: #02367b; /* Red */
+  --background-color: #FFFAFA; /* Light Gray */
+  --text-color: #333; /* Dark Gray */
+}
+body{
+    padding: 0;
+    margin: 5px;
+    height: 100vh;    
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.div-1{
+    width: 50%;
+    background-image: url("../image/paddy\ image\ edited.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+}
+.heading{
+    color: #fafafa  ;    
+    font-size: 40px;  
+    margin-bottom: 30px;
+    margin-left: 20px;
+    border-radius: 8px;
+    white-space: nowrap;   
+}
+
+.typing {
+    border-right: 3px solid var(--primary-color); 
+    display: inline-flex;
+    overflow: hidden;
+    width: 0ch; 
+    animation: typing 2.5s steps(10) forwards, blink 0.6s infinite alternate;
+    color: var(--primary-color);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+    to {
+        width: 10ch;
+    }
+}
+
+@keyframes blink {
+    0% { border-right-color: white; }
+    100% { border-right-color: transparent; }
+}
+/* .div-1 p{
+  color: white;
+} */
+.div-2{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    
+    padding-top: 20px;
+    height: auto
+
+}
+
+.signin{
+    width: 600px;
+    /* min-width: 300px; */
+    background-color: #FFFAFA ;
+    border-radius: 10px;
+    border-style: solid;
+    margin-top: 10px;  
+    box-shadow: #007bff;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+}
+
+
+@keyframes circleBorder {
+    0% {
+      border-top: 4px solid var(--primary-color);
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+    25% {
+      border-top: 4px solid transparent;
+      border-right: 4px solid var(--primary-color);
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+    50% {
+      border-top: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid var(--primary-color);
+      border-left: 4px solid transparent;
+    }
+    75% {
+      border-top: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid var(--primary-color);
+    }
+    100% {
+      border-top: 4px solid var(--primary-color);
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+  }
+  .signin{
+    border: 4px solid transparent;
+    animation: circleBorder 4s linear infinite; 
+  }
+  
+.signin-text{
+    color: var(--primary-color);
+    text-align: center;
+    font-size: xx-large;
+    animation: fadeIn 1.3s ease-in-out infinite alternate;
+
+}
+
+.signup{
+    color: #2358db;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.google-continue{
+    align-self: center;
+    place-content: center;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-google{
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.btn-google:hover{
+  background-color: #007bff;
+  color: white;
+}
+.btn-google:active{
+  background-color: #054992;
+}
+.or-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.or-con::before,
+.or-con::after {
+  content: "";
+  flex-grow: 1;
+  height: 1.5px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.or-con span {
+  color: #2a2a2a;
+  font-size: 18px;
+}
+@media (max-width: 932px)  /* before na vechathu 1095 */{
+  
+  body{
+    background-image: radial-gradient(circle at center center, rgba(217, 217, 217,0.05) 0%, rgba(217, 217, 217,0.05) 15%,rgba(197, 197, 197,0.05) 15%, rgba(197, 197, 197,0.05) 34%,rgba(178, 178, 178,0.05) 34%, rgba(178, 178, 178,0.05) 51%,rgba(237, 237, 237,0.05) 51%, rgba(237, 237, 237,0.05) 75%,rgba(138, 138, 138,0.05) 75%, rgba(138, 138, 138,0.05) 89%,rgba(158, 158, 158,0.05) 89%, rgba(158, 158, 158,0.05) 100%),radial-gradient(circle at center center, rgb(255,255,255) 0%, rgb(255,255,255) 6%,rgb(255,255,255) 6%, rgb(255,255,255) 12%,rgb(255,255,255) 12%, rgb(255,255,255) 31%,rgb(255,255,255) 31%, rgb(255,255,255) 92%,rgb(255,255,255) 92%, rgb(255,255,255) 97%,rgb(255,255,255) 97%, rgb(255,255,255) 100%); background-size: 42px 42px;
+} 
+  .main{
+    display: block;
+  }
+  .div-1{
+    width: 100%;
+    background-image: none;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .heading{
+    font-size: 27px;
+    margin-bottom: 10px;
+    color: black;
+    
+  }
+  .div-2{
+    width: 100%;
+  }
+  .or-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .or-con::before,
+  .or-con::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px; /* Thinner line */
+    background-color: #ccc;
+    margin: 0 5px; /* Reduced margin */
+  }
+
+  .or-con span {
+    color: #2a2a2a;
+    font-size: 14px; /* Smaller font size */
+  }
+
+  
+}
+
+/* loadinng uh */
+.parent-loading{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-content: center   ;
+}
+.loadingspinner {
+  --square: 26px;
+  --offset: 30px;
+  --duration: 2.4s;
+  --delay: 0.2s;
+  --timing-function: ease-in-out;
+  --in-duration: 0.4s;
+  --in-delay: 0.1s;
+  --in-timing-function: ease-out;
+  width: calc( 3 * var(--offset) + var(--square));
+  height: calc( 2 * var(--offset) + var(--square));
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  position: relative; 
+}
+
+.loadingspinner div {
+  display: inline-block;
+  background: var(--primary-color); 
+  border: none;
+  border-radius: 2px;
+  width: var(--square);
+  height: var(--square);
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  font-size: 6pt;
+  color: black;
+}
+
+.parent-loading h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-top: 15px;
+  animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+
+.loadingspinner #square1 {
+  left: calc( 0 * var(--offset) );
+  top: calc( 0 * var(--offset) );
+  animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square2 {
+  left: calc( 0 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
+              squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square3 {
+  left: calc( 1 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square4 {
+  left: calc( 2 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square5 {
+  left: calc( 3 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+@keyframes square1 {
+  0% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  8.333% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes square2 {
+  0% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  8.333% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  16.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  25.00% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  83.33% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  91.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+}
+
+@keyframes square3 {
+  0%,100% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  16.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  25.00% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  33.33% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  41.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  66.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  75.00% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  83.33% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  91.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes square4 {
+  0% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  33.33% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  41.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  50.00% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  58.33% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes square5 {
+  0% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  50.00% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  58.33% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  66.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  75.00% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes squarefadein {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.0;
+  }
+
+  100% {
+    transform: scale(1.0);
+    opacity:1.0;
+}
+}
+
+@media (max-width: 932px){
+.loadingspinner{
+  --square: 26px;
+}
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

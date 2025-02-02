@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #17B169;  /* Blue */
+    --secondary-color: #02367b; /* Red */
+    --background-color: #FFFAFA; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+  }
+  
+  .form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .form label {
+    width: 100%;
+    font-size: 16px;
+    color: #2a2a2a;
+    margin-bottom: -3px;
+    margin-left: -7px;
+  }
+  .form label svg {
+    font-size: 18px;
+    transform: translateY(3px);
+  }
+  .form input {
+    width: 100%;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 7px;
+    background-color: transparent;
+    border-width: 1px;
+  }
+  .form input:focus{
+    outline: none;
+    border: 2px solid var(--primary-color);
+    background-color: #f0f8ff
+  }
+ 
+.submit {
+    padding: 10px 15px; 
+    color: var(--primary-color);
+    color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .submit:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+.forget-pass {
+    align-self: flex-end;
+    color: #2358db;
+    font-size: 14px;
+    margin-top: -5px;
+  }
+  
+  
+  .signup-google-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .signup-google-container button {
+    padding: 8px 20px;
+    background-color: #34b7f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .signup-google-container button:hover {
+    background-color: #2a97d9;
+  }
+  
