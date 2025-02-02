@@ -26,6 +26,7 @@
   }
   .form label svg {
     font-size: 18px;
+    padding-left: 3px;
     transform: translateY(3px);
   }
   .form input {
@@ -88,5 +89,10 @@
   
   .signup-google-container button:hover {
     background-color: #2a97d9;
+  }
+  .google-continue svg{
+    font-size: 18px;
+    padding-left: 3px;
+    transform: translateY(3px);
   }
   

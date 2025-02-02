@@ -124,6 +124,7 @@ body{
   }
   .signup-form label svg {
     font-size: 18px;
+    padding-left: 3px;
     transform: translateY(3px);
   }
   .signup-form input:focus{
