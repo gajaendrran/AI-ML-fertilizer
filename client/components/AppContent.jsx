@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from "../pages/Home";
 import SignIn from "../pages/SignIn";
 import SignUp from '../pages/SignUp';
-import Form from '../pages/Form';  
+import FertiForm from '../pages/FertiForm';  
 import PasswordChange from '../pages/PasswordChange';
 import PasswordReset from '../pages/PasswordReset';
 
@@ -21,7 +21,7 @@ const AppContent = () => {
             {user ? (
                 <>
                     <Route path='/' element={<Home />} />
-                    <Route path='/ferti-form' element={<Form />} />
+                    <Route path='/ferti-form' element={<FertiForm />} />
                 </>
             ) : (
                 <>
