@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import Home from "../pages/Home";
 import SignIn from "../pages/SignIn";
 import SignUp from '../pages/SignUp';
-import FertiForm from '../pages/FertiForm';
 import PasswordChange from '../pages/PasswordChange';
 import PasswordReset from '../pages/PasswordReset';
 import ProtectedNavBar from './ProtectedNavBar';
@@ -27,7 +26,7 @@ const AppContent = () => {
                     <Route element={<ProtectedNavBar />}>
                         <Route path='/' element={<Home />} />
                         <Route path='/history' element={<History />} />
-                        <Route path='/contact' element={<Contact />} />
+                        <Route path='/notify' element={<Contact />} />
                         <Route path='/about' element={<About />} />
                     </Route>
                 </>

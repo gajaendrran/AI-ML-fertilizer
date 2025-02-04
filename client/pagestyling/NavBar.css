@@ -1,67 +1,134 @@
 :root {
-    --primary-color: #17B169; /* Pacha (Green) */
+    --primary-color: #17B169;
 }
-
-/* Navbar Styles */
-.navbar {
-    width: 100%;
-    background: var(--primary-color); /* Green background */
-    border: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    z-index: 100;
-    font-weight: 500;
-    transition: all 0.4s ease;
+body{
+    margin: 0px;
 }
-
-/* Navigation List */
-.navbar-nav {
-    list-style: none;
+.navbar {  
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.8s ease, color 0.6s ease; /* Slower transition */
+}
+
+.navbar.sticky-header {
+    background-color: var(--primary-color);
+}
+
+.navbar h2 {
+    font-size: 24px;
     margin: 0;
-    padding: 10px 20px;
+    animation: fadeIn 1.3s ease-in-out infinite alternate;
+
 }
 
-/* Navigation Links */
-.nav-link {
-    color: white; /* White text for contrast */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.8s ease, color 0.6s ease;
+}
+.navbar-nav li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    color: white;
     font-size: 16px;
-    font-weight: 500;
-    padding: 10px 15px;
-    transition: all 0.4s ease;
+    padding: 5px;
+    transition: color 0.8s ease, background-color 0.8s ease; 
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    background-color: white;
+    border-radius: 5px;
+    color: var(--primary-color);
 }
 
-.nav-link:hover {
-    color: var(--primary-color); /* Green text on hover */
-    background-color: white; /* White background */
-    border-radius: 25px;
+.navbar-nav li span {
+    margin-left: 8px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.8s ease; 
 }
 
-/* Sticky Header */
-.sticky-header {
-    background-color: rgba(23, 177, 105, 0.9); /* Slightly transparent green */
+.navbar-nav li.active span {
+    opacity: 1;
 }
 
-/* Logout Button */
+.navbar-nav li a svg {
+    font-size: 20px;
+    color: white;
+    transition: color 0.8s ease; 
+}
+
+.navbar-nav li a:hover svg,
+.navbar-nav li.active a svg {
+    color: var(--primary-color);
+}
 .logout-btn {
     background-color: transparent;
-    border: 2px solid white;
+    border: none;
     color: white;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 25px;
+    font-size: 20px;
     cursor: pointer;
-    transition: all ease 0.4s;
+    display: flex;
+    align-items: center;
+    margin-top: 3px ;
+
 }
 
-.logout-btn:hover {
-    color: var(--primary-color);
-    background-color: white;
+.logout-btn:hover::after{
+    content: "Log Out";
+    cursor: pointer;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; 
+        align-items: center; 
+        padding: 10px 20px; 
+        flex-wrap: wrap;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly; 
+    }
+
+    .navbar-nav li {
+        margin: 0 17px;
+    }
+
+    .navbar h2 {
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 0;
+        font-size: 25px;
+        flex-grow: 1; 
+        white-space: nowrap;
+        margin-bottom: 15px;
+    }
+
+    .logout-btn {
+        margin-left: auto; 
+        display: flex;
+        align-items: center;
+        white-space: nowrap; 
+    }
 }
