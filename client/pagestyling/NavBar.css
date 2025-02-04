@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #17B169; /* Pacha (Green) */
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background: var(--primary-color); /* Green background */
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 100;
+    font-weight: 500;
+    transition: all 0.4s ease;
+}
+
+/* Navigation List */
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+/* Navigation Links */
+.nav-link {
+    color: white; /* White text for contrast */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.4s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color); /* Green text on hover */
+    background-color: white; /* White background */
+    border-radius: 25px;
+}
+
+/* Sticky Header */
+.sticky-header {
+    background-color: rgba(23, 177, 105, 0.9); /* Slightly transparent green */
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+.logout-btn:hover {
+    color: var(--primary-color);
+    background-color: white;
+}
