@@ -36,7 +36,7 @@
         <h2>Smart Fert</h2>
         <ul className="nav navbar-nav navbar-right">
           <li className={active === "home" ? "active" : ""} onClick={() => handleClick('home')}>
-            <Link to="/" className="nav-link">
+            <Link to="/home" className="nav-link">
               <FaHome />
               {active === 'home' && <span>Home</span>}
             </Link>

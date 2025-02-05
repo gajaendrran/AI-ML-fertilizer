@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route ,Navigate} from 'react-router-dom';
 import Home from "../pages/Home";
 import SignIn from "../pages/SignIn";
 import SignUp from '../pages/SignUp';
@@ -10,6 +10,11 @@ import ProtectedNavBar from './ProtectedNavBar';
 import History from '../pages/History';
 import Contact from '../pages/Contact';
 import About from '../pages/About';
+
+const ProtectedRoute = ({ children }) => {
+    const globalUser = useSelector((state) => state.userInfo.user);
+    return globalUser ? children : <Navigate to="/" />;
+};
 
 const AppContent = () => {
     const globalUser = useSelector((state) => state.userInfo.user);
@@ -21,23 +26,17 @@ const AppContent = () => {
 
     return (
         <Routes>
-            {user ? (
-                <>
-                    <Route element={<ProtectedNavBar />}>
-                        <Route path='/' element={<Home />} />
-                        <Route path='/history' element={<History />} />
-                        <Route path='/notify' element={<Contact />} />
-                        <Route path='/about' element={<About />} />
-                    </Route>
-                </>
-            ) : (
-                <>
-                    <Route path='/' element={<SignIn />} />
-                    <Route path='/signup' element={<SignUp />} />
-                    <Route path='/password-change' element={<PasswordChange />} />
-                    <Route path='/password-reset' element={<PasswordReset />} />
-                </>
-            )}
+            <Route path="/" element={user ? <Navigate to="/home" /> : <SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/password-change" element={<PasswordChange />} />
+            <Route path="/password-reset" element={<PasswordReset />} />
+
+            <Route element={<ProtectedNavBar />}>
+                <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+                <Route path="/history" element={<ProtectedRoute><History /></ProtectedRoute>} />
+                <Route path="/notify" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
+                <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
+            </Route>
         </Routes>
     );
 };
