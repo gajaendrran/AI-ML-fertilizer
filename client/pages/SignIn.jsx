@@ -16,7 +16,11 @@ const SignIn = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        dispatch(setGlobalUser(user.email));
+        const userDetail = {
+          email: user.email,
+          uid: user.uid
+        }
+        dispatch(setGlobalUser(userDetail));
         setMethod("load");
       } else {
         setMethod(null);
@@ -30,7 +34,11 @@ const SignIn = () => {
       setError(null);
       const googleProvider = new GoogleAuthProvider();
       const credentials = await signInWithPopup(auth, googleProvider);
-      dispatch(setGlobalUser(credentials.user.email));
+      const userDetail = {
+        email: credentials.user.email,
+        uid: credentials.user.uid
+      }
+      dispatch(setGlobalUser(userDetail));
     }
     catch (error) {
       console.error(error);
@@ -66,13 +74,13 @@ const SignIn = () => {
               <EmailSignIn />
 
               <div className='or-con'>
-                 <span>or</span>
+                <span>or</span>
               </div>
 
               <div className='google-continue'>
                 <button onClick={googleSignIn} className='btn-google'>Continue with Google<FaGoogle /></button>
               </div>
-              
+
               <center> <h4 >New Here? <span className='signup'><Link to="/signup">Signup</Link></span></h4> </center>
 
               {error && <span>{error}</span>}
