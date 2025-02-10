@@ -1,7 +1,7 @@
 :root {
   --primary-color: #17B169;  /* pacha */
   --secondary-color: #02367b; /* Red */
-  --background-color: #FFFAFA; /* Light Gray */
+  --background-color: #fefefe; /* Light Gray */
   --text-color: #333; /* Dark Gray */
 }
 body{
