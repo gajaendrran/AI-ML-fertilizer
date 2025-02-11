@@ -21,7 +21,16 @@ const History = () => {
       <h2>History</h2>
       <ul>
         {history.map((his, index) => (
-          <li key={index}>{his.shortContent}</li> 
+          <li key={index}>
+            <h2>{new Date(his.createdAt).toLocaleString()}</h2>
+            <span>{his.shortContent}</span>
+            {
+              his._id && 
+              <a href={`http://localhost:5001/download-pdf/${his._id}`}>
+                <button>View Pdf</button>
+              </a>
+            }
+          </li> 
         ))}
       </ul>
     </>
