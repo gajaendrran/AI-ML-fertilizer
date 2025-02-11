@@ -15,6 +15,7 @@ body{
     top: 0;
     z-index: 10;
     transition: background-color 0.8s ease, color 0.6s ease; /* Slower transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .navbar.sticky-header {

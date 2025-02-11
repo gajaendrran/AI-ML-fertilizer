@@ -3,6 +3,7 @@ const { spawn } = require('child_process');
 const router = express.Router();
 const cropTips = require('../cropdetails/crops');
 const generatepdf = require('../functions/generatepdf');
+const verifyToken = require('../functions/verifyToken');
 
 let pythonProcess = null;
 
@@ -26,11 +27,15 @@ startPythonProcess();
 
 router.post('/', async (req, res) => {
     try {
-        const { temperature, soilType, cropType, nitrogen, phosphorus, potassium, useruid } = req.body;
+        const { temperature, soilType, cropType, nitrogen, phosphorus, potassium, usertoken } = req.body;
 
         if (!pythonProcess) {
             return res.status(500).json({ error: "Python process is not running" });
         }
+
+        const decodedToken = await verifyToken(usertoken);
+
+        const useruid = decodedToken.uid;
 
         const input = JSON.stringify({ temperature, soilType, cropType, nitrogen, phosphorus, potassium }) + "\n";
 

@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
 connectDB();
 app.use('/predict', predictRoutes);
 app.use('/download-pdf',pdfRoutes);

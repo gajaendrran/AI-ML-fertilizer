@@ -20,9 +20,10 @@ const EmailSignIn = () => {
     try {
       if (mail && password) {
         const credentials = await signInWithEmailAndPassword(auth, mail, password);
+        const token = await credentials.user.getIdToken();
         const userDetail = {
                 email : credentials.user.email,
-                uid : credentials.user.uid
+                token: token
               }
         dispatch(setGlobalUser(userDetail));
       }

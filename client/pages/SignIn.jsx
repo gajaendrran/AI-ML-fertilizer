@@ -14,11 +14,12 @@ const SignIn = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async(user) => {
       if (user) {
+        const token = await user.getIdToken();
         const userDetail = {
           email: user.email,
-          uid: user.uid
+          token: token
         }
         dispatch(setGlobalUser(userDetail));
         setMethod("load");
@@ -34,9 +35,10 @@ const SignIn = () => {
       setError(null);
       const googleProvider = new GoogleAuthProvider();
       const credentials = await signInWithPopup(auth, googleProvider);
+      const token = await credentials.user.getIdToken();
       const userDetail = {
         email: credentials.user.email,
-        uid: credentials.user.uid
+        token: token
       }
       dispatch(setGlobalUser(userDetail));
     }

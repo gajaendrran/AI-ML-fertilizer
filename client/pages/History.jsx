@@ -4,16 +4,17 @@ import { useSelector } from 'react-redux';
 
 const History = () => {
   const user = useSelector((state) => state.userInfo.user);
-  const useruid = user?.uid;
+  const usertoken = user?.token;
 
   const [history, setHistory] = useState([]);
  
   useEffect(() => {
-      axios.get(`http://localhost:5001/history/${useruid}`)
+      axios.get(`http://localhost:5001/history/`,
+      {headers:{
+                'Authorization':`Bearer ${usertoken}` }})
         .then(response => setHistory(response.data))
         .catch(error => console.error('Error fetching data:', error));
-    
-  }, [useruid]); 
+  }, [usertoken]); 
 
   return (
     <>

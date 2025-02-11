@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 const Form = () => {
   
   const user = useSelector((state) => state.userInfo.user);
-  const useruid = user?.uid;
+  const usertoken = user?.token;
 
   const [formData, setFormData] = useState({
     temperature: "",
@@ -35,14 +35,13 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const reqdata = {...formData,useruid};
+      const reqdata = {...formData,usertoken};
       const response = await axios.post("http://localhost:5001/predict", reqdata);
 
       console.log(response);
 
       setPrediction(response.data.fertilizer);
 
-      //Set the description based on the backend response
       setDescription(
         `For ${formData.cropType}, 
         The ${response.data.fertilizer} fertilizer is recommended, 
@@ -52,10 +51,9 @@ const Form = () => {
         ${response.data.additionalTips}`
       );
 
-      // Set the PDF download link
       setPdfUrl(`http://localhost:5001/download-pdf/${response.data.pdfid}`);
 
-      setShowPdfButton(true); // Show PDF button after prediction
+      setShowPdfButton(true); 
     } catch (error) {
       console.error("Error predicting fertilizer:", error);
     }
