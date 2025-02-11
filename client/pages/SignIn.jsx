@@ -48,7 +48,7 @@ const SignIn = () => {
   return (
     <div>
       {method === "load" &&
-        <div class="parent-loading">
+        <div className="parent-loading">
           <h2>Loading...</h2>
           <div class="loadingspinner">
             <div id="square1"></div>
