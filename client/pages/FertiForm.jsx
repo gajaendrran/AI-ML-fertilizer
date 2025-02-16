@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import {useSelector} from 'react-redux';
+import '../pagestyling/FertiForm.css';
 
 const Form = () => {
   
@@ -20,6 +21,7 @@ const Form = () => {
   const [description, setDescription] = useState("");
   const [showPdfButton, setShowPdfButton] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   // Options for dropdowns
   const soilTypes = ["Sandy", "Loamy", "Clayey", "Red", "Black", "Alluvial"];
@@ -53,6 +55,7 @@ const Form = () => {
 
       setPdfUrl(`http://localhost:5001/download-pdf/${response.data.pdfid}`);
 
+      setShowPopup(true);
       setShowPdfButton(true); 
     } catch (error) {
       console.error("Error predicting fertilizer:", error);
@@ -60,17 +63,18 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className="ferti-form-div">
       <h2>Fertilizer Recommendation</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="ferti-form">
         <input
           type="number"
           name="temperature"
           placeholder="Temperature ℃"
           onChange={handleChange}
           required
+          className="input"
         />
-        <select name="soilType" onChange={handleChange} required>
+        <select name="soilType" onChange={handleChange} required className="input">
           <option value="">Select Soil Type</option>
           {soilTypes.map((soil) => (
             <option key={soil} value={soil}>
@@ -79,7 +83,7 @@ const Form = () => {
           ))}
         </select>
 
-        <select name="cropType" onChange={handleChange} required>
+        <select name="cropType" onChange={handleChange} required className="input">
           <option value="">Select Crop Type</option>
           {cropTypes.map((crop) => (
             <option key={crop} value={crop}>
@@ -94,6 +98,7 @@ const Form = () => {
           placeholder="Nitrogen (N)"
           onChange={handleChange}
           required
+          className="input"
         />
         <input
           type="number"
@@ -101,6 +106,7 @@ const Form = () => {
           placeholder="Phosphorus (P)"
           onChange={handleChange}
           required
+          className="input"
         />
         <input
           type="number"
@@ -108,21 +114,25 @@ const Form = () => {
           placeholder="Potassium (K)"
           onChange={handleChange}
           required
+          className="input"
         />
 
         <button type="submit">Predict Fertilizer</button>
       </form>
 
-      {prediction && <h3>Recommended Fertilizer: {prediction}</h3>}
-
-      {/* Displaying the description of fertilizer and crop before PDF generation */}
-      {description && <div className="description">{description}</div>}
-
-      {showPdfButton && (
-        <a href={pdfUrl} download>
-          <button>Download Fertilizer PDF</button>
-        </a>
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <h3>Recommended Fertilizer: {prediction}</h3>
+            <p>{description}</p>
+            <a href={pdfUrl} download>
+              <button className="download-btn">Download Fertilizer PDF</button>
+            </a>
+            <button className="close-btn" onClick={() => setShowPopup(false)}>Close</button>
+          </div>
+        </div>
       )}
+
     </div>
   );
 };

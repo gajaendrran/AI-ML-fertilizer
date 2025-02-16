@@ -132,4 +132,12 @@ body{
         align-items: center;
         white-space: nowrap; 
     }
+
 }
+@media (max-width : 250px){
+    .navbar{
+        width: 100%;
+    }
+
+}
+    
