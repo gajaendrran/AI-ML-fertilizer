@@ -3,6 +3,7 @@
 }
 body{
     margin: 0px;
+    width: 100%;
 }
 .navbar {  
     display: flex;
@@ -28,7 +29,6 @@ body{
     animation: fadeIn 1.3s ease-in-out infinite alternate;
 
 }
-
 .navbar-nav {
     display: flex;
     list-style: none;
@@ -91,7 +91,6 @@ body{
     margin-top: 3px;
 
 }
-
 .logout-btn:hover::after{
     content: "Log Out";
     cursor: pointer;

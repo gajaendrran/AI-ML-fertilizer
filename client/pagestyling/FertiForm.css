@@ -8,7 +8,6 @@
       background-image: url('../image/smartfert-intro.jpg');
       background-size: cover;
     }
-
     .ferti-form {
       margin-bottom: 90px;
       display: grid;
@@ -16,7 +15,6 @@
       gap: 30px;
       justify-content: center;
       align-items: center;
-
       border-width: 1px;
       height: 500px;
       width: 1200px;
@@ -51,24 +49,24 @@
     }
 
     .input {
-
       padding: 10px;
       border: solid rgb(117, 163, 117);
-      ;
       outline-color: rgb(117, 163, 117);
       border-radius: 10px;
       width: 380px;
     }
-
-
 
     .input:hover {
       border-radius: 15px;
       border-color: rgba(186, 92, 20, 0.875);
       animation: glitter 0.7s;
       transition: 0.2s;
+    }
 
-
+    select.input {
+      appearance: none;
+      background-color: white;
+      width: 405px;
     }
 
     .ferti-btn {
@@ -138,15 +136,13 @@
       background-color: #cc0000;
       color: white;
       position: relative;
-      left: 5px;
+      margin-left: 14%;
     }
 
     .close-btn:hover {
       background-color: #990000;
       box-shadow: 0 0 10px #cc0000;
     }
-
-
 
     @media (max-width:1300px) {
       .ferti-form {
@@ -164,17 +160,19 @@
         padding-top: 80px;
 
       }
-      .popup-content{
-         width: 50%;
-         height: 30%;
+
+      .popup-content {
+        width: 50%;
+        height: 30%;
       }
-      .close-btn{
+
+      .close-btn {
         margin-left: 30px;
       }
 
       .input {
         width: 60%;
-       
+
       }
 
       .ferti-btn {
@@ -184,7 +182,6 @@
     }
 
     @media (max-width:576px) {
-
       .ferti-form {
         display: flex;
         flex-direction: column;
@@ -192,19 +189,21 @@
         align-items: center;
         padding-top: 10px;
         width: 80%;
-        margin-bottom: 500px;
+        margin-bottom: 100px;
         height: 100vh;
-
-
-
       }
-      .popup-content{
-        width: 50%;
+
+      .popup-content {
+        width: 60%;
         height: 40%;
-     }
+      }
 
       .input {
-        width: 50%;
+        width: 70%;
+      }
+
+      select.input {
+        width: 255px;
       }
 
       .ferti-btn {

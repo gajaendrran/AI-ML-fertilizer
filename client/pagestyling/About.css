@@ -1,8 +1,6 @@
 :root {
-    --primary-color: #17B169;
-   
+    --primary-color: #17B169;  
 }
-
 .outer{
     animation: fadeIn 1.9s;
 }

@@ -35,7 +35,7 @@ const About = () => {
         </div>
         <div className='about2'>
             <div className='about2-inner'>
-              <h3>Revolutionizing Agriculture with AI</h3>
+              <h3>Revolutionizing Agri with AI</h3>
               <p>At Smart Fert Advisor, we are dedicated to empowering farmers with cutting-edge AI technology to enhance crop yields, optimize fertilizer usage, and promote sustainable farming. Our platform provides personalized fertilizer recommendations based on soil health, crop type, weather conditions, and other crucial factors—helping farmers make data-driven decisions with ease.</p>
             </div>
         </div>

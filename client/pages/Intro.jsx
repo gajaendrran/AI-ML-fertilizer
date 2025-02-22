@@ -22,7 +22,6 @@ const Intro = ({ToForm }) => {
                 className="intro-btn" 
                 onClick={() => {
                     setStart(true);
-                    
                     setTimeout(() => {
                         ToForm()
                     }, 300);

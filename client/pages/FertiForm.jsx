@@ -105,7 +105,6 @@ const Form = () => {
                 </option>
               ))}
             </select>
-
             <input
               type="number"
               name="nitrogen"
@@ -130,7 +129,6 @@ const Form = () => {
               required
               className="input"
             />
-
             <button type="submit" className="ferti-btn">Predict Fertilizer</button>
             <button onClick={ToIntro} className="ferti-btn">Back</button>
           </form>
@@ -141,13 +139,12 @@ const Form = () => {
                 <h3>Recommended Fertilizer: {prediction}</h3>
                 <p>{description}</p>
                 <a href={pdfUrl} download>
-                  <button className="download-btn">Download Fertilizer PDF</button>
+                  <button className="download-btn">Download PDF</button>
                 </a>
                 <button className="close-btn" onClick={() => setShowPopup(false)}>Close</button>
               </div>
             </div>
           )}
-
         </div>
       )}
     </>
