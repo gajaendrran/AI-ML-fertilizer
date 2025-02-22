@@ -1,0 +1,63 @@
+.history-heading{
+    color: #666666;
+}
+.table-container {
+    padding: 16px;
+    overflow-x: auto;
+  }
+  
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .history-table th, .history-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .history-table th {
+    background-color: #F1F1F1;
+    color: #666666;
+  }
+
+  .history-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .short-content {
+    width: 50%;
+    text-align: justify;
+  }
+  
+  .view-pdf {
+    background-color: #17B169   ;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-pdf:hover {
+    background-color: #02723e;
+    box-shadow: 0 0 10px #028a3d;
+  }
+  .centered {
+    text-align: center;
+  }
+.history-outer{ 
+    animation: fadeIn 1.9s;
+  }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
