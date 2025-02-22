@@ -1,10 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import '../pagestyling/FertiForm.css';
+import Intro from './Intro.jsx'
 
 const Form = () => {
-  
+
   const user = useSelector((state) => state.userInfo.user);
   const usertoken = user?.token;
 
@@ -17,6 +18,8 @@ const Form = () => {
     potassium: "",
   });
 
+  const [showForm, setShowForm] = useState(false);
+
   const [prediction, setPrediction] = useState("");
   const [description, setDescription] = useState("");
   const [showPdfButton, setShowPdfButton] = useState(false);
@@ -26,7 +29,7 @@ const Form = () => {
   // Options for dropdowns
   const soilTypes = ["Sandy", "Loamy", "Clayey", "Red", "Black", "Alluvial"];
   const cropTypes = [
-    "Rice", "Wheat", "Millets", "Cotton", "Sugarcane", "Barley", "Tobacco", 
+    "Rice", "Wheat", "Millets", "Cotton", "Sugarcane", "Barley", "Tobacco",
     "Oil seeds", "Pulses", "Ground Nuts", "Corn"
   ];
 
@@ -37,7 +40,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const reqdata = {...formData,usertoken};
+      const reqdata = { ...formData, usertoken };
       const response = await axios.post("http://localhost:5001/predict", reqdata);
 
       console.log(response);
@@ -56,84 +59,98 @@ const Form = () => {
       setPdfUrl(`http://localhost:5001/download-pdf/${response.data.pdfid}`);
 
       setShowPopup(true);
-      setShowPdfButton(true); 
+      setShowPdfButton(true);
     } catch (error) {
       console.error("Error predicting fertilizer:", error);
     }
   };
 
+  const ToIntro = () => {
+    setShowForm(false);
+  }
+
   return (
-    <div className="ferti-form-div">
-      <h2>Fertilizer Recommendation</h2>
-      <form onSubmit={handleSubmit} className="ferti-form">
-        <input
-          type="number"
-          name="temperature"
-          placeholder="Temperature ℃"
-          onChange={handleChange}
-          required
-          className="input"
-        />
-        <select name="soilType" onChange={handleChange} required className="input">
-          <option value="">Select Soil Type</option>
-          {soilTypes.map((soil) => (
-            <option key={soil} value={soil}>
-              {soil}
-            </option>
-          ))}
-        </select>
+    <>
+      {!showForm ? (
+        <>
+          <Intro ToForm={() => setShowForm(true)} />
+          {console.log(showForm)}
+        </>
+      ) : (
+        <div className="ferti-form-div">
+          <h2>Fertilizer Recommendation</h2>
+          <form onSubmit={handleSubmit} className="ferti-form">
+            <input
+              type="number"
+              name="temperature"
+              placeholder="Temperature ℃"
+              onChange={handleChange}
+              required
+              className="input"
+            />
+            <select name="soilType" onChange={handleChange} required className="input">
+              <option value="">Select Soil Type</option>
+              {soilTypes.map((soil) => (
+                <option key={soil} value={soil}>
+                  {soil}
+                </option>
+              ))}
+            </select>
 
-        <select name="cropType" onChange={handleChange} required className="input">
-          <option value="">Select Crop Type</option>
-          {cropTypes.map((crop) => (
-            <option key={crop} value={crop}>
-              {crop}
-            </option>
-          ))}
-        </select>
+            <select name="cropType" onChange={handleChange} required className="input">
+              <option value="">Select Crop Type</option>
+              {cropTypes.map((crop) => (
+                <option key={crop} value={crop}>
+                  {crop}
+                </option>
+              ))}
+            </select>
 
-        <input
-          type="number"
-          name="nitrogen"
-          placeholder="Nitrogen (N)"
-          onChange={handleChange}
-          required
-          className="input"
-        />
-        <input
-          type="number"
-          name="phosphorus"
-          placeholder="Phosphorus (P)"
-          onChange={handleChange}
-          required
-          className="input"
-        />
-        <input
-          type="number"
-          name="potassium"
-          placeholder="Potassium (K)"
-          onChange={handleChange}
-          required
-          className="input"
-        />
+            <input
+              type="number"
+              name="nitrogen"
+              placeholder="Nitrogen (N)"
+              onChange={handleChange}
+              required
+              className="input"
+            />
+            <input
+              type="number"
+              name="phosphorus"
+              placeholder="Phosphorus (P)"
+              onChange={handleChange}
+              required
+              className="input"
+            />
+            <input
+              type="number"
+              name="potassium"
+              placeholder="Potassium (K)"
+              onChange={handleChange}
+              required
+              className="input"
+            />
 
-        <button type="submit">Predict Fertilizer</button>
-      </form>
+            <button type="submit">Predict Fertilizer</button>
+            <button onClick={ToIntro}>Back</button>
+          </form>
 
-      {showPopup && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <h3>Recommended Fertilizer: {prediction}</h3>
-            <p>{description}</p>
-            <a href={pdfUrl} download>
-              <button className="download-btn">Download Fertilizer PDF</button>
-            </a>
-            <button className="close-btn" onClick={() => setShowPopup(false)}>Close</button>
-          </div>
+          {showPopup && (
+            <div className="popup-overlay">
+              <div className="popup-content">
+                <h3>Recommended Fertilizer: {prediction}</h3>
+                <p>{description}</p>
+                <a href={pdfUrl} download>
+                  <button className="download-btn">Download Fertilizer PDF</button>
+                </a>
+                <button className="close-btn" onClick={() => setShowPopup(false)}>Close</button>
+              </div>
+            </div>
+          )}
+
         </div>
       )}
-
-    </div>
+    </>
   );
 };
 
