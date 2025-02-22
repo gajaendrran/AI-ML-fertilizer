@@ -70,10 +70,20 @@
     bottom: 30px;
     padding: 30px;
 }
-button{
+/* button{
     font-family: 'Poppins', serif;
      transition: transform 0.3s ease-in-out;
     
+} */
+.intro-btn{
+    padding: 10px 30px;
+      border: none;
+      background-color: #049e36;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
 }
 .contents{
    
@@ -111,7 +121,7 @@ button{
         padding: 10px;
     }
 
-    button {
+    .intro-btn {
         font-size: 1rem;
         padding: 10px 20px;
     }
@@ -134,7 +144,7 @@ button{
         font-size: 1.2rem;
     }
 
-    button {
+    .intro-btn {
         font-size: 1.1rem;
     }
 }
@@ -156,7 +166,7 @@ button{
         font-size: 1.3rem;
     }
 
-    button {
+    .intro-btn {
         font-size: 1.2rem;
     }
 }

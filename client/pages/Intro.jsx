@@ -19,7 +19,7 @@ const Intro = ({ToForm }) => {
               <h1>Welcome to <span className="smart">SmartFert!</span></h1>
               <p>Optimize your farming with SmartFert, an advanced fertilizer recommendation system designed to help you make the best choices for your crops. By analyzing soil type, crop selection, and essential nutrients, SmartFert provides accurate, science-backed fertilizer suggestions to enhance productivity and sustainability. Say goodbye to guesswork and embrace smarter, data-driven agriculture for healthier crops and higher yields! </p>
               <motion.button 
-                className="button" 
+                className="intro-btn" 
                 onClick={() => {
                     setStart(true);
                     

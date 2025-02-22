@@ -71,7 +71,7 @@
 
     }
 
-    button {
+    .ferti-btn {
       grid-column: span 2;
       justify-self: center;
       padding: 10px 30px;
@@ -86,7 +86,7 @@
       right: 50px
     }
 
-    button:hover {
+    .ferti-btn:hover {
       background-color: #03782c;
       box-shadow: 0 0 10px #049e36;
     }
@@ -177,7 +177,7 @@
        
       }
 
-      button {
+      .ferti-btn {
         position: relative;
         left: 5px;
       }
@@ -207,9 +207,8 @@
         width: 50%;
       }
 
-      button {
+      .ferti-btn {
         position: relative;
         left: 5px
       }
-
     }

@@ -131,8 +131,8 @@ const Form = () => {
               className="input"
             />
 
-            <button type="submit">Predict Fertilizer</button>
-            <button onClick={ToIntro}>Back</button>
+            <button type="submit" className="ferti-btn">Predict Fertilizer</button>
+            <button onClick={ToIntro} className="ferti-btn">Back</button>
           </form>
 
           {showPopup && (
