@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #17B169;
+   
+}
+
+.outer{
+    animation: fadeIn 1.9s;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .about1 {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+
+  }
+  
+  .about1 h3 {
+    font-size: 70px;
+    font-weight: bold;
+    color: #666666;
+
+    margin: 0;
+  }
+  
+  .about2 {
+    flex: 2;
+    min-width: 300px;
+    text-align: left;
+    padding: 5px;
+    
+  }
+.about2-inner{
+    padding-right: 50px;
+    
+  }
+  .about2 h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  .about2 p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  .about-mission{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #F1F1F1;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .about-mission h2{
+    margin: 0;
+    font-size: 30px;
+    color: #666666;
+}
+  .about-mission-inner {
+    display: flex;
+    justify-content: space-between;
+    /* lign-items: center; */
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .about-mission1,
+  .about-mission2 {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+  }
+
+  .about-mission1 p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .about-mission2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-mission2 img {
+    max-width: 100%;
+    height: 45vh;
+    display: block;
+    object-fit: cover;
+  }
+  
+ .about-corousel{
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  
+  .carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    /* font-weight: bold; */
+    font-weight: 700;
+    color: #666666;
+    transition: opacity 0.5s ease-in-out;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .indicator.active {
+    background: #333;
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 600px) {
+    .carousel-container {
+      height: 80px;
+    }
+    .carousel-slide {
+      font-size: 1.1rem;
+    }
+    .carousel-button {
+      font-size: 1rem;
+      padding: 8px;
+    }
+    .carousel-button.left {
+      left: 5px;
+    }
+    .carousel-button.right {
+      right: 5px;
+    }
+    .indicator {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+.about-footer{
+    display: flex;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1F1F1;
+}
+      
+  
+
+
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      text-align: center;
+    }
+    .about1 h3{
+        font-size: 40px;
+    }
+    .about1, .about2 {
+      text-align: center;
+    }
+    .about2-inner{
+        padding: 0;
+    }
+    .about-mission-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .about-mission1, .about-mission2 {
+        text-align: center;
+      }
+  }
+ 
+  
+  
