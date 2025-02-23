@@ -5,7 +5,9 @@ async function generatepdf(cropobj)
 {
     return new Promise((resolve,reject) => {
 
-        const doc = new pdfdoc();
+        const doc = new pdfdoc({
+            margin:50
+        });
         const buffers = [];        
 
         doc.on("data", (chunk) => buffers.push(chunk));
@@ -31,11 +33,17 @@ async function generatepdf(cropobj)
             }
         });
 
+        const borderMargin = 20;
+        doc.rect(borderMargin, borderMargin, doc.page.width - 2 * borderMargin, doc.page.height - 2 * borderMargin)
+            .stroke();
         doc.fontSize(16).text("Crop Report", { align: "center" });
         doc.moveDown();
         doc.fontSize(12).text(`Fertilizer Recommendation: ${cropobj.fertilizer}`);
+        doc.moveDown();
         doc.text(`Irrigation Tips: ${cropobj.irrigation}`);
+        doc.moveDown();
         doc.text(`Additional Tips: ${cropobj.additionalTips}`);
+        doc.moveDown();
         doc.text(`Days Required: ${cropobj.days}`);
         doc.end();
     })

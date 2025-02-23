@@ -39,18 +39,28 @@ router.post('/', async (req, res) => {
 
         const input = JSON.stringify({ temperature, soilType, cropType, nitrogen, phosphorus, potassium }) + "\n";
 
-        let output = "";
+        let output = '';
 
         let cropobj;
 
         let resobj;
 
-        pythonProcess.stdin.write(input);
+        const poutput = await new Promise((resolve, reject) => {
+            pythonProcess.stdin.write(input, (err) => {
+                if (err) reject(err);
+            });
 
-        await pythonProcess.stdout.once("data", (data) => {
-            output += data.toString().trim();
-            console.log(output);
+            pythonProcess.stdout.once("data", (data) => {
+                output = data.toString().trim();
+                resolve(output);
+            });
+
+            pythonProcess.stderr.once("data", (errData) => {
+                reject(`Python Error: ${errData.toString()}`);
+            });
         });
+
+        console.log(output);
 
         const cropData = cropTips[cropType];
 
@@ -63,6 +73,7 @@ router.post('/', async (req, res) => {
             additionalTips: cropData.additionalTips,
             days: cropData.days
         }
+        
         const pdfid = await generatepdf(cropobj);
 
         resobj = {
