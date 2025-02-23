@@ -3,6 +3,7 @@ const cors = require('cors');
 const predictRoutes = require('./routes/predict');
 const pdfRoutes = require('./routes/pdf');
 const historyRoutes = require('./routes/history');
+const deleteRoutes = require('./routes/delete');
 const connectDB = require('./db/connect');
 
 
@@ -15,6 +16,7 @@ connectDB();
 app.use('/predict', predictRoutes);
 app.use('/download-pdf',pdfRoutes);
 app.use('/history', historyRoutes);
+app.use('/delete',deleteRoutes);
 
 
 app.listen(5001, () => {

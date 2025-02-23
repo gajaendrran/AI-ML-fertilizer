@@ -46,6 +46,20 @@
     background-color: #02723e;
     box-shadow: 0 0 10px #028a3d;
   }
+  .delete{
+    width: 24%;
+    margin-left: 10px;
+    background-color: #cc0000;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .delete:hover{
+    background-color: #990000;
+    box-shadow: 0 0 10px #cc0000;
+  }
   .centered {
     text-align: center;
   }
@@ -60,4 +74,22 @@
         opacity: 1;
     }
 }
-  
+@media (max-width:768px)
+{
+  .view-pdf{
+    padding: 4px 9px;
+  }
+  a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .delete 
+  {
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 15px;
+  }
+}

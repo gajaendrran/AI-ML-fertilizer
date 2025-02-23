@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 
         const useruid = decodedToken.uid;
 
-        const items = await pdfModel.find({ userId: useruid },{pdfData:0,userId:0});
+        const items = await pdfModel.find({ userId: useruid },{pdfData:0,userId:0}).sort({createdAt:-1});
 
         res.json(items);
     } catch (err) {

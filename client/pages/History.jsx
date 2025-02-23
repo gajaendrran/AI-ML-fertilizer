@@ -15,7 +15,14 @@ const History = () => {
         .then(response => setHistory(response.data))
         .catch(error => console.error('Error fetching data:', error));
   }, [usertoken]); 
-
+  async function handleDelete(id)
+  {
+    const response = await axios.delete(`http://localhost:5001/delete/${id}`);
+    if(response.status === 200)
+    {
+      setHistory(history => history.filter(his => his._id!==id));
+    }
+  }
   return (
     <>
       
@@ -33,9 +40,6 @@ const History = () => {
           </li> 
         ))}
       </ul> */}
-
-
-
     <div className='history-outer'>
       <center><h2 className='history-heading'><u>History</u></h2></center>
       <div className="table-container">
@@ -54,9 +58,12 @@ const History = () => {
                 <td className="short-content">{his.shortContent}</td>
                 <td>
                   {his._id && (
-                    <a href={`http://localhost:5001/download-pdf/${his._id}`}>
+                    <>
+                      <a href={`http://localhost:5001/download-pdf/${his._id}`}>
                       <button className="view-pdf">View PDF</button>
                     </a>
+                    <button className='delete' onClick={()=>handleDelete(his._id)}>Delete</button>
+                    </>
                   )}
                 </td>
               </tr>
