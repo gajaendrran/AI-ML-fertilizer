@@ -23,6 +23,14 @@ const History = () => {
       setHistory(history => history.filter(his => his._id!==id));
     }
   }
+  const [expandedRows, setExpandedRows] = useState({});
+
+  const toggleExpand = (index) => {
+    setExpandedRows((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
   return (
     <>
       
@@ -55,7 +63,18 @@ const History = () => {
             {history.map((his, index) => (
               <tr key={index}>
                 <td>{new Date(his.createdAt).toLocaleString()}</td>
-                <td className="short-content">{his.shortContent}</td>
+                <td className="short-content">{/* {his.shortContent} */}
+                <span className="short-content-desktop">{his.shortContent}</span>
+                <span className="short-content-mobile">
+                  {expandedRows[index] ? his.shortContent : his.shortContent.slice(0, 70) + "..."}
+                  <button 
+                    className="view-more" 
+                    onClick={() => toggleExpand(index)}
+                  >
+                    {expandedRows[index] ? "View Less" : "View More"}
+                  </button>
+                </span>
+                </td>
                 <td>
                   {his._id && (
                     <>

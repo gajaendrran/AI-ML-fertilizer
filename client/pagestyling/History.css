@@ -74,6 +74,29 @@
         opacity: 1;
     }
 }
+.short-content-mobile {
+  display: none;
+}
+
+.short-content-desktop {
+  display: block;
+}
+
+.view-more {
+  padding: 5px 3px; 
+  color: var(--primary-color);
+  background-color: transparent;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: 0.3s ease-in;
+}
+
+.view-more:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
 @media (max-width:768px)
 {
   .view-pdf{
@@ -92,4 +115,12 @@
     width: 100%;
     margin-top: 15px;
   }
+  .short-content-mobile {
+    display: block;
+  }
+
+  .short-content-desktop {
+    display: none;
+  }
 }
+

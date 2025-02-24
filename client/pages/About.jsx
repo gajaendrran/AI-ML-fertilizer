@@ -53,7 +53,7 @@ const About = () => {
             </p>
           </div>
           <div className='about-mission2'>
-            <img src="../image/aboutferti.webp" alt="photo" />
+            <img src="../image/aboutferti(1).webp" alt="photo" />
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ const About = () => {
       <div className="about-footer">
         <center>
           <div>
-          © 2025 Smart Fert Advisor | Developed by GCE
+          © 2025 Smart Fert | Developed by Team GCE
           </div>
         </center>
       </div>
