@@ -10,8 +10,6 @@ const Form = () => {
   const usertoken = user?.token;
 
   const [formData, setFormData] = useState({
-    temperature: "",
-    soilType: "",
     cropType: "",
     nitrogen: "",
     phosphorus: "",
@@ -27,7 +25,6 @@ const Form = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   // Options for dropdowns
-  const soilTypes = ["Sandy", "Loamy", "Clayey", "Red", "Black", "Alluvial"];
   const cropTypes = [
     "Rice", "Wheat", "Millets", "Cotton", "Sugarcane", "Barley", "Tobacco",
     "Oil seeds", "Pulses", "Ground Nuts", "Corn"
@@ -80,23 +77,6 @@ const Form = () => {
         <div className="ferti-form-div">
           <h2>Fertilizer Recommendation</h2>
           <form onSubmit={handleSubmit} className="ferti-form">
-            <input
-              type="number"
-              name="temperature"
-              placeholder="Temperature ℃"
-              onChange={handleChange}
-              required
-              className="input"
-            />
-            {/* <select name="soilType" onChange={handleChange} required className="input">
-              <option value="">Select Soil Type</option>
-              {soilTypes.map((soil) => (
-                <option key={soil} value={soil}>
-                  {soil}
-                </option>
-              ))}
-            </select> */}
-
             <select name="cropType" onChange={handleChange} required className="input">
               <option value="">Select Crop Type</option>
               {cropTypes.map((crop) => (
