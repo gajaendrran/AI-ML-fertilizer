@@ -27,7 +27,7 @@ startPythonProcess();
 
 router.post('/', async (req, res) => {
     try {
-        const { temperature, soilType, cropType, nitrogen, phosphorus, potassium, usertoken } = req.body;
+        const {cropType, nitrogen, phosphorus, potassium, usertoken } = req.body;
 
         if (!pythonProcess) {
             return res.status(500).json({ error: "Python process is not running" });
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
 
         const useruid = decodedToken.uid;
 
-        const input = JSON.stringify({ temperature, soilType, cropType, nitrogen, phosphorus, potassium }) + "\n";
+        const input = JSON.stringify({cropType, nitrogen, phosphorus, potassium }) + "\n";
 
         let output = '';
 
