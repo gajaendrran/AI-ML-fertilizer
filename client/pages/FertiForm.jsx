@@ -88,14 +88,14 @@ const Form = () => {
               required
               className="input"
             />
-            <select name="soilType" onChange={handleChange} required className="input">
+            {/* <select name="soilType" onChange={handleChange} required className="input">
               <option value="">Select Soil Type</option>
               {soilTypes.map((soil) => (
                 <option key={soil} value={soil}>
                   {soil}
                 </option>
               ))}
-            </select>
+            </select> */}
 
             <select name="cropType" onChange={handleChange} required className="input">
               <option value="">Select Crop Type</option>

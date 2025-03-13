@@ -6,19 +6,19 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 # Load Dataset
-file_path = "Fertilizer_Prediction_Dataset.csv"  # Make sure the file exists in the same folder
+file_path = "newdataset.csv"  # Make sure the file exists in the same folder
 data = pd.read_csv(file_path)
 
 # Encode Categorical Features
 label_encoders = {}
-for column in ['Soil Type', 'Crop Type', 'Fertilizer Name']:
+for column in ['Crop_Type', 'Fertilizer']:
     le = LabelEncoder()
     data[column] = le.fit_transform(data[column])
     label_encoders[column] = le
 
 # Feature Selection (Including NPK)
-X = data[['Temperature', 'Soil Type', 'Crop Type', 'Nitrogen', 'Phosphorous', 'Potassium']]
-y = data['Fertilizer Name']
+X = data[['Crop_Type', 'Nitrogen', 'Phosphorous', 'Potassium']]
+y = data['Fertilizer']
 
 # Train-Test Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
