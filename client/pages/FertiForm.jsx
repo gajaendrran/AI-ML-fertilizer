@@ -25,10 +25,10 @@ const Form = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   // Options for dropdowns
-  const cropTypes = [
-    "Rice", "Wheat", "Millets", "Cotton", "Sugarcane", "Barley", "Tobacco",
-    "Oil seeds", "Pulses", "Ground Nuts", "Corn"
-  ];
+  const cropTypes = ['Barley', 'Coffee', 'Cotton', 'Ground Nuts', 'Kidneybeans', 'Maize', 'Millets', 
+    'Oil Seeds', 'Orange', 'Paddy', 'Pomegranate', 'Pulses', 'Rice', 'Sugarcane', 
+    'Tobacco', 'Watermelon', 'Wheat']
+   ;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

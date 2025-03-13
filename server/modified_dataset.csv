@@ -1,0 +1,553 @@
+Crop_Type,Nitrogen,Potassium,Phosphorous,Fertilizer
+Barley,5.0,18.0,15.0,10-26-26
+Barley,7.0,9.0,30.0,14-35-14
+Barley,12.0,10.0,13.0,17-17-17
+Barley,12.0,10.0,13.0,17-17-17
+Barley,12.0,10.0,13.0,17-17-17
+Barley,12.0,10.0,13.0,17-17-17
+Barley,21.0,0.0,28.0,28-28
+Barley,21.0,0.0,19.0,28-28
+Barley,7.0,9.0,30.0,14-35-14
+Barley,7.0,9.0,30.0,14-35-14
+Barley,7.0,9.0,30.0,14-35-14
+Barley,5.0,18.0,15.0,10-26-26
+Barley,12.0,0.0,42.0,DAP
+Barley,10.0,0.0,35.0,DAP
+Barley,10.0,0.0,35.0,DAP
+Barley,10.0,0.0,35.0,DAP
+Barley,5.0,18.0,15.0,10-26-26
+Barley,12.0,0.0,42.0,DAP
+Barley,12.0,0.0,42.0,DAP
+Barley,21.0,0.0,28.0,28-28
+Barley,21.0,0.0,28.0,28-28
+Barley,21.0,0.0,28.0,28-28
+Barley,21.0,0.0,19.0,28-28
+Barley,10.0,0.0,35.0,DAP
+Barley,21.0,0.0,19.0,28-28
+Barley,21.0,0.0,19.0,28-28
+Barley,5.0,18.0,15.0,10-26-26
+Barley,12.0,0.0,42.0,DAP
+Coffee,80.0,30.0,25.0,Urea
+Coffee,80.0,30.0,25.0,Urea
+Coffee,80.0,30.0,25.0,Urea
+Coffee,85.0,33.0,25.0,Urea
+Coffee,85.0,33.0,25.0,Urea
+Coffee,85.0,33.0,25.0,Urea
+Coffee,117.0,34.0,25.0,DAP
+Coffee,116.0,23.0,25.0,DAP
+Coffee,117.0,34.0,25.0,DAP
+Coffee,116.0,23.0,25.0,DAP
+Coffee,80.0,30.0,25.0,Urea
+Coffee,85.0,33.0,25.0,Urea
+Coffee,116.0,23.0,25.0,DAP
+Coffee,116.0,23.0,25.0,DAP
+Coffee,117.0,34.0,25.0,DAP
+Coffee,117.0,34.0,25.0,DAP
+Cotton,14.0,0.0,38.0,DAP
+Cotton,24.0,0.0,20.0,28-28
+Cotton,11.0,12.0,15.0,17-17-17
+Cotton,11.0,12.0,15.0,17-17-17
+Cotton,11.0,12.0,15.0,17-17-17
+Cotton,9.0,9.0,29.0,14-35-14
+Cotton,24.0,0.0,20.0,28-28
+Cotton,8.0,10.0,31.0,14-35-14
+Cotton,8.0,10.0,31.0,14-35-14
+Cotton,8.0,10.0,31.0,14-35-14
+Cotton,14.0,0.0,38.0,DAP
+Cotton,22.0,26.0,38.0,Potassium sulfate.
+Cotton,9.0,9.0,29.0,14-35-14
+Cotton,24.0,0.0,20.0,28-28
+Cotton,7.0,9.0,30.0,14-35-14
+Cotton,9.0,9.0,29.0,14-35-14
+Cotton,8.0,10.0,31.0,14-35-14
+Cotton,9.0,9.0,29.0,14-35-14
+Cotton,7.0,9.0,30.0,14-35-14
+Cotton,36.0,0.0,0.0,Urea
+Cotton,36.0,0.0,0.0,Urea
+Cotton,36.0,0.0,0.0,Urea
+Cotton,39.0,0.0,0.0,Urea
+Cotton,39.0,0.0,0.0,Urea
+Cotton,39.0,0.0,0.0,Urea
+Cotton,7.0,9.0,30.0,14-35-14
+Cotton,11.0,12.0,15.0,17-17-17
+Cotton,36.0,0.0,0.0,Urea
+Cotton,39.0,0.0,0.0,Urea
+Cotton,7.0,9.0,30.0,14-35-14
+Cotton,22.0,26.0,38.0,Potassium sulfate.
+Cotton,9.0,0.0,10.0,20-20
+Cotton,22.0,26.0,38.0,Potassium sulfate.
+Cotton,24.0,0.0,20.0,28-28
+Cotton,117.0,43.0,25.0,Potassium chloride
+Cotton,102.0,37.0,25.0,DAP
+Cotton,126.0,46.0,25.0,DAP
+Cotton,117.0,43.0,25.0,Potassium chloride
+Cotton,126.0,46.0,25.0,DAP
+Cotton,126.0,46.0,25.0,DAP
+Cotton,126.0,46.0,25.0,DAP
+Cotton,15.0,0.0,40.0,DAP
+Cotton,102.0,37.0,25.0,DAP
+Cotton,102.0,37.0,25.0,DAP
+Cotton,15.0,0.0,40.0,DAP
+Cotton,117.0,43.0,25.0,Potassium chloride
+Cotton,22.0,26.0,38.0,Potassium sulfate.
+Cotton,15.0,0.0,40.0,DAP
+Cotton,15.0,0.0,40.0,DAP
+Cotton,102.0,37.0,25.0,DAP
+Cotton,14.0,0.0,38.0,DAP
+Cotton,9.0,0.0,10.0,20-20
+Cotton,11.0,0.0,38.0,DAP
+Cotton,117.0,43.0,25.0,Potassium chloride
+Cotton,9.0,0.0,10.0,20-20
+Cotton,11.0,0.0,38.0,DAP
+Cotton,11.0,0.0,38.0,DAP
+Cotton,11.0,0.0,38.0,DAP
+Cotton,9.0,0.0,10.0,20-20
+Cotton,14.0,0.0,35.0,DAP
+Cotton,14.0,0.0,35.0,DAP
+Cotton,14.0,0.0,35.0,DAP
+Cotton,14.0,0.0,35.0,DAP
+Cotton,14.0,0.0,38.0,DAP
+Ground Nuts,13.0,0.0,39.0,DAP
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,24.0,0.0,23.0,28-28
+Ground Nuts,15.0,14.0,11.0,17-17-17
+Ground Nuts,14.0,0.0,41.0,DAP
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,13.0,0.0,39.0,DAP
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,14.0,0.0,41.0,DAP
+Ground Nuts,14.0,0.0,41.0,DAP
+Ground Nuts,15.0,14.0,11.0,17-17-17
+Ground Nuts,15.0,0.0,37.0,DAP
+Ground Nuts,24.0,0.0,23.0,28-28
+Ground Nuts,15.0,0.0,37.0,DAP
+Ground Nuts,15.0,14.0,11.0,17-17-17
+Ground Nuts,13.0,0.0,39.0,DAP
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,15.0,0.0,37.0,DAP
+Ground Nuts,24.0,0.0,23.0,28-28
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,13.0,0.0,39.0,DAP
+Ground Nuts,15.0,0.0,37.0,DAP
+Ground Nuts,41.0,0.0,0.0,Urea
+Ground Nuts,14.0,0.0,41.0,DAP
+Ground Nuts,24.0,0.0,23.0,28-28
+Ground Nuts,15.0,14.0,11.0,17-17-17
+Kidneybeans,25.0,18.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Kidneybeans,25.0,18.0,6.0,15-15-15
+Kidneybeans,25.0,18.0,6.0,15-15-15
+Kidneybeans,20.0,25.0,6.0,15-15-15
+Kidneybeans,20.0,25.0,6.0,15-15-15
+Kidneybeans,20.0,25.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Kidneybeans,19.0,21.0,6.0,10-10-2010
+Kidneybeans,20.0,25.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Kidneybeans,25.0,18.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Kidneybeans,23.0,23.0,6.0,15-15-15
+Maize,5.0,9.0,29.0,14-35-14
+Maize,14.0,15.0,12.0,17-17-17
+Maize,22.0,0.0,21.0,28-28
+Maize,5.0,9.0,29.0,14-35-14
+Maize,14.0,15.0,12.0,17-17-17
+Maize,14.0,15.0,12.0,17-17-17
+Maize,14.0,15.0,12.0,17-17-17
+Maize,37.0,0.0,0.0,Urea
+Maize,37.0,0.0,0.0,Urea
+Maize,37.0,0.0,0.0,Urea
+Maize,9.0,10.0,30.0,14-35-14
+Maize,5.0,9.0,29.0,14-35-14
+Maize,23.0,0.0,20.0,28-28
+Maize,9.0,10.0,30.0,14-35-14
+Maize,9.0,10.0,30.0,14-35-14
+Maize,22.0,0.0,21.0,28-28
+Maize,22.0,0.0,21.0,28-28
+Maize,22.0,0.0,21.0,28-28
+Maize,9.0,10.0,30.0,14-35-14
+Maize,23.0,0.0,20.0,28-28
+Maize,23.0,0.0,20.0,28-28
+Maize,23.0,0.0,20.0,28-28
+Maize,5.0,9.0,29.0,14-35-14
+Maize,37.0,0.0,0.0,Urea
+Millets,15.0,0.0,41.0,DAP
+Millets,10.0,0.0,14.0,20-20
+Millets,36.0,0.0,0.0,Urea
+Millets,21.0,0.0,18.0,28-28
+Millets,23.0,0.0,24.0,28-28
+Millets,21.0,0.0,18.0,28-28
+Millets,23.0,0.0,24.0,28-28
+Millets,23.0,0.0,24.0,28-28
+Millets,8.0,0.0,15.0,20-20
+Millets,21.0,0.0,18.0,28-28
+Millets,10.0,0.0,9.0,20-20
+Millets,41.0,0.0,0.0,Urea
+Millets,41.0,0.0,0.0,Urea
+Millets,15.0,0.0,37.0,DAP
+Millets,15.0,0.0,37.0,DAP
+Millets,10.0,0.0,9.0,20-20
+Millets,10.0,0.0,9.0,20-20
+Millets,10.0,0.0,9.0,20-20
+Millets,8.0,0.0,15.0,20-20
+Millets,8.0,0.0,15.0,20-20
+Millets,8.0,0.0,15.0,20-20
+Millets,10.0,0.0,14.0,20-20
+Millets,10.0,0.0,14.0,20-20
+Millets,10.0,0.0,14.0,20-20
+Millets,15.0,0.0,41.0,DAP
+Millets,21.0,0.0,18.0,28-28
+Millets,23.0,0.0,24.0,28-28
+Millets,15.0,0.0,41.0,DAP
+Millets,15.0,0.0,37.0,DAP
+Millets,35.0,0.0,0.0,Urea
+Millets,15.0,0.0,41.0,DAP
+Millets,15.0,0.0,37.0,DAP
+Millets,41.0,0.0,0.0,Urea
+Millets,41.0,0.0,0.0,Urea
+Millets,36.0,0.0,0.0,Urea
+Millets,36.0,0.0,0.0,Urea
+Millets,36.0,0.0,0.0,Urea
+Millets,35.0,0.0,0.0,Urea
+Millets,35.0,0.0,0.0,Urea
+Millets,35.0,0.0,0.0,Urea
+Millets,41.0,0.0,0.0,Urea
+Millets,41.0,0.0,0.0,Urea
+Millets,41.0,0.0,0.0,Urea
+Millets,41.0,0.0,0.0,Urea
+Oil Seeds,9.0,7.0,30.0,14-35-14
+Oil Seeds,9.0,7.0,30.0,14-35-14
+Oil Seeds,12.0,0.0,39.0,DAP
+Oil Seeds,12.0,0.0,39.0,DAP
+Oil Seeds,12.0,0.0,8.0,20-20
+Oil Seeds,37.0,0.0,0.0,Urea
+Oil Seeds,12.0,0.0,8.0,20-20
+Oil Seeds,12.0,0.0,39.0,DAP
+Oil Seeds,37.0,0.0,0.0,Urea
+Oil Seeds,42.0,0.0,0.0,Urea
+Oil Seeds,42.0,0.0,0.0,Urea
+Oil Seeds,9.0,7.0,30.0,14-35-14
+Oil Seeds,8.0,9.0,30.0,14-35-14
+Oil Seeds,12.0,0.0,8.0,20-20
+Oil Seeds,8.0,9.0,30.0,14-35-14
+Oil Seeds,12.0,0.0,8.0,20-20
+Oil Seeds,9.0,7.0,30.0,14-35-14
+Oil Seeds,8.0,9.0,30.0,14-35-14
+Oil Seeds,13.0,0.0,14.0,20-20
+Oil Seeds,13.0,0.0,14.0,20-20
+Oil Seeds,13.0,0.0,14.0,20-20
+Oil Seeds,8.0,9.0,30.0,14-35-14
+Oil Seeds,42.0,0.0,0.0,Urea
+Oil Seeds,37.0,0.0,0.0,Urea
+Oil Seeds,13.0,0.0,14.0,20-20
+Oil Seeds,42.0,0.0,0.0,Urea
+Oil Seeds,37.0,0.0,0.0,Urea
+Oil Seeds,12.0,0.0,39.0,DAP
+Orange,24.0,18.0,6.0,14-14-14
+Orange,8.0,16.0,6.0,14-14-14
+Orange,24.0,18.0,6.0,14-14-14
+Orange,5.0,25.0,6.0,14-14-14
+Orange,11.0,14.0,5.0,10-10-2010
+Orange,8.0,16.0,6.0,14-14-14
+Orange,4.0,13.0,6.0,14-14-14
+Orange,4.0,23.0,5.0,10-10-2010
+Orange,5.0,25.0,6.0,14-14-14
+Orange,4.0,13.0,6.0,14-14-14
+Orange,22.0,17.0,5.0,10-10-2010
+Orange,8.0,16.0,6.0,14-14-14
+Orange,4.0,13.0,6.0,14-14-14
+Orange,24.0,18.0,6.0,14-14-14
+Orange,5.0,25.0,6.0,14-14-14
+Orange,5.0,25.0,6.0,14-14-14
+Orange,24.0,18.0,6.0,14-14-14
+Orange,8.0,16.0,6.0,14-14-14
+Orange,4.0,13.0,6.0,14-14-14
+Paddy,13.0,0.0,10.0,20-20
+Paddy,13.0,0.0,10.0,20-20
+Paddy,9.0,10.0,22.0,14-35-14
+Paddy,12.0,0.0,41.0,DAP
+Paddy,10.0,8.0,29.0,14-35-14
+Paddy,10.0,8.0,29.0,14-35-14
+Paddy,12.0,0.0,41.0,DAP
+Paddy,9.0,10.0,22.0,14-35-14
+Paddy,12.0,0.0,41.0,DAP
+Paddy,9.0,10.0,22.0,14-35-14
+Paddy,9.0,10.0,22.0,14-35-14
+Paddy,10.0,8.0,29.0,14-35-14
+Paddy,12.0,0.0,41.0,DAP
+Paddy,36.0,0.0,0.0,Urea
+Paddy,35.0,0.0,0.0,Urea
+Paddy,24.0,0.0,22.0,28-28
+Paddy,24.0,0.0,18.0,28-28
+Paddy,24.0,0.0,18.0,28-28
+Paddy,13.0,0.0,10.0,20-20
+Paddy,24.0,0.0,22.0,28-28
+Paddy,6.0,19.0,21.0,10-26-26
+Paddy,6.0,19.0,21.0,10-26-26
+Paddy,13.0,0.0,10.0,20-20
+Paddy,6.0,19.0,21.0,10-26-26
+Paddy,6.0,19.0,21.0,10-26-26
+Paddy,10.0,8.0,29.0,14-35-14
+Paddy,35.0,0.0,0.0,Urea
+Paddy,39.0,0.0,0.0,Urea
+Paddy,24.0,0.0,18.0,28-28
+Paddy,24.0,0.0,22.0,28-28
+Paddy,36.0,0.0,0.0,Urea
+Paddy,36.0,0.0,0.0,Urea
+Paddy,36.0,0.0,0.0,Urea
+Paddy,39.0,0.0,0.0,Urea
+Paddy,39.0,0.0,0.0,Urea
+Paddy,39.0,0.0,0.0,Urea
+Paddy,35.0,0.0,0.0,Urea
+Paddy,35.0,0.0,0.0,Urea
+Paddy,24.0,0.0,22.0,28-28
+Paddy,24.0,0.0,18.0,28-28
+Pomegranate,5.0,15.0,38.0,TSP
+Pomegranate,21.0,21.0,38.0,Superphosphate
+Pomegranate,31.0,25.0,38.0,Superphosphate
+Pomegranate,0.0,27.0,38.0,Superphosphate
+Pomegranate,5.0,21.0,38.0,TSP
+Pomegranate,2.0,24.0,38.0,Urea
+Pomegranate,15.0,11.0,38.0,Potassium sulfate.
+Pomegranate,2.0,24.0,38.0,Urea
+Pomegranate,39.0,30.0,38.0,Potassium sulfate.
+Pomegranate,31.0,25.0,38.0,Superphosphate
+Pomegranate,39.0,30.0,38.0,Potassium sulfate.
+Pomegranate,21.0,21.0,38.0,Superphosphate
+Pomegranate,15.0,11.0,38.0,Potassium sulfate.
+Pomegranate,39.0,30.0,38.0,Potassium sulfate.
+Pomegranate,39.0,30.0,38.0,Potassium sulfate.
+Pomegranate,21.0,21.0,38.0,Superphosphate
+Pomegranate,21.0,21.0,38.0,Superphosphate
+Pomegranate,31.0,25.0,38.0,Superphosphate
+Pomegranate,31.0,25.0,38.0,Superphosphate
+Pomegranate,15.0,11.0,38.0,Potassium sulfate.
+Pomegranate,0.0,27.0,38.0,Superphosphate
+Pomegranate,2.0,24.0,38.0,Urea
+Pomegranate,15.0,11.0,38.0,Potassium sulfate.
+Pomegranate,0.0,27.0,38.0,Superphosphate
+Pomegranate,0.0,27.0,38.0,Superphosphate
+Pomegranate,5.0,21.0,38.0,TSP
+Pomegranate,5.0,21.0,38.0,TSP
+Pomegranate,5.0,21.0,38.0,TSP
+Pomegranate,5.0,15.0,38.0,TSP
+Pomegranate,2.0,24.0,38.0,Urea
+Pomegranate,5.0,15.0,38.0,TSP
+Pomegranate,5.0,15.0,38.0,TSP
+Pulses,6.0,19.0,16.0,10-26-26
+Pulses,7.0,16.0,20.0,10-26-26
+Pulses,21.0,0.0,23.0,28-28
+Pulses,24.0,0.0,19.0,28-28
+Pulses,21.0,0.0,23.0,28-28
+Pulses,24.0,0.0,19.0,28-28
+Pulses,24.0,0.0,19.0,28-28
+Pulses,13.0,0.0,13.0,20-20
+Pulses,14.0,0.0,13.0,20-20
+Pulses,21.0,0.0,23.0,28-28
+Pulses,13.0,0.0,40.0,DAP
+Pulses,7.0,16.0,20.0,10-26-26
+Pulses,7.0,16.0,20.0,10-26-26
+Pulses,8.0,7.0,31.0,14-35-14
+Pulses,8.0,7.0,31.0,14-35-14
+Pulses,38.0,0.0,0.0,Urea
+Pulses,38.0,0.0,0.0,Urea
+Pulses,38.0,0.0,0.0,Urea
+Pulses,40.0,0.0,0.0,Urea
+Pulses,6.0,19.0,16.0,10-26-26
+Pulses,40.0,0.0,0.0,Urea
+Pulses,6.0,19.0,16.0,10-26-26
+Pulses,6.0,19.0,16.0,10-26-26
+Pulses,8.0,7.0,31.0,14-35-14
+Pulses,40.0,0.0,0.0,Urea
+Pulses,13.0,0.0,40.0,DAP
+Pulses,13.0,0.0,40.0,DAP
+Pulses,13.0,0.0,40.0,DAP
+Pulses,13.0,0.0,13.0,20-20
+Pulses,21.0,0.0,23.0,28-28
+Pulses,24.0,0.0,19.0,28-28
+Pulses,13.0,0.0,13.0,20-20
+Pulses,13.0,0.0,13.0,20-20
+Pulses,14.0,0.0,13.0,20-20
+Pulses,14.0,0.0,13.0,20-20
+Pulses,14.0,0.0,13.0,20-20
+Pulses,40.0,0.0,0.0,Urea
+Pulses,38.0,0.0,0.0,Urea
+Pulses,7.0,16.0,20.0,10-26-26
+Pulses,8.0,7.0,31.0,14-35-14
+Rice,90.0,49.0,36.0,Urea
+Rice,75.0,47.0,36.0,DAP
+Rice,78.0,43.0,36.0,DAP
+Rice,78.0,43.0,36.0,DAP
+Rice,66.0,59.0,36.0,Urea
+Rice,66.0,59.0,36.0,Urea
+Rice,66.0,59.0,36.0,Urea
+Rice,90.0,49.0,36.0,Urea
+Rice,90.0,49.0,36.0,Urea
+Rice,90.0,49.0,36.0,Urea
+Rice,86.0,41.0,36.0,TSP
+Rice,78.0,43.0,36.0,DAP
+Rice,86.0,41.0,36.0,TSP
+Rice,73.0,48.0,36.0,TSP
+Rice,86.0,41.0,36.0,TSP
+Rice,75.0,47.0,36.0,DAP
+Rice,66.0,59.0,36.0,Urea
+Rice,73.0,48.0,36.0,TSP
+Rice,73.0,48.0,36.0,TSP
+Rice,75.0,47.0,36.0,DAP
+Rice,86.0,41.0,36.0,TSP
+Rice,78.0,43.0,36.0,DAP
+Rice,73.0,48.0,36.0,TSP
+Rice,75.0,47.0,36.0,DAP
+Sugarcane,11.0,13.0,15.0,17-17-17
+Sugarcane,35.0,0.0,0.0,Urea
+Sugarcane,11.0,13.0,15.0,17-17-17
+Sugarcane,35.0,0.0,0.0,Urea
+Sugarcane,35.0,0.0,0.0,Urea
+Sugarcane,38.0,0.0,0.0,Urea
+Sugarcane,38.0,0.0,0.0,Urea
+Sugarcane,12.0,14.0,12.0,17-17-17
+Sugarcane,11.0,13.0,15.0,17-17-17
+Sugarcane,10.0,7.0,32.0,14-35-14
+Sugarcane,8.0,8.0,33.0,14-35-14
+Sugarcane,10.0,7.0,32.0,14-35-14
+Sugarcane,38.0,0.0,0.0,Urea
+Sugarcane,35.0,0.0,0.0,Urea
+Sugarcane,12.0,0.0,36.0,DAP
+Sugarcane,12.0,0.0,40.0,DAP
+Sugarcane,9.0,0.0,13.0,20-20
+Sugarcane,10.0,0.0,15.0,20-20
+Sugarcane,11.0,0.0,9.0,20-20
+Sugarcane,10.0,7.0,32.0,14-35-14
+Sugarcane,12.0,0.0,10.0,20-20
+Sugarcane,12.0,14.0,12.0,17-17-17
+Sugarcane,11.0,13.0,15.0,17-17-17
+Sugarcane,10.0,7.0,32.0,14-35-14
+Sugarcane,8.0,8.0,33.0,14-35-14
+Sugarcane,8.0,8.0,33.0,14-35-14
+Sugarcane,12.0,14.0,12.0,17-17-17
+Sugarcane,8.0,8.0,33.0,14-35-14
+Sugarcane,10.0,13.0,14.0,17-17-17
+Sugarcane,12.0,14.0,12.0,17-17-17
+Sugarcane,38.0,0.0,0.0,Urea
+Sugarcane,10.0,13.0,14.0,17-17-17
+Sugarcane,12.0,0.0,36.0,DAP
+Sugarcane,12.0,0.0,40.0,DAP
+Sugarcane,12.0,0.0,40.0,DAP
+Sugarcane,12.0,0.0,40.0,DAP
+Sugarcane,12.0,0.0,10.0,20-20
+Sugarcane,12.0,0.0,10.0,20-20
+Sugarcane,10.0,13.0,14.0,17-17-17
+Sugarcane,12.0,0.0,36.0,DAP
+Sugarcane,11.0,0.0,9.0,20-20
+Sugarcane,11.0,0.0,9.0,20-20
+Sugarcane,10.0,0.0,15.0,20-20
+Sugarcane,10.0,0.0,15.0,20-20
+Sugarcane,10.0,0.0,15.0,20-20
+Sugarcane,9.0,0.0,13.0,20-20
+Sugarcane,9.0,0.0,13.0,20-20
+Sugarcane,9.0,0.0,13.0,20-20
+Sugarcane,11.0,0.0,9.0,20-20
+Sugarcane,12.0,0.0,36.0,DAP
+Sugarcane,12.0,0.0,10.0,20-20
+Sugarcane,10.0,13.0,14.0,17-17-17
+Tobacco,23.0,0.0,21.0,28-28
+Tobacco,13.0,17.0,16.0,10-26-26
+Tobacco,4.0,17.0,17.0,10-26-26
+Tobacco,23.0,0.0,21.0,28-28
+Tobacco,22.0,0.0,24.0,28-28
+Tobacco,22.0,0.0,20.0,28-28
+Tobacco,22.0,0.0,20.0,28-28
+Tobacco,11.0,0.0,37.0,DAP
+Tobacco,22.0,0.0,20.0,28-28
+Tobacco,22.0,0.0,20.0,28-28
+Tobacco,13.0,17.0,16.0,10-26-26
+Tobacco,13.0,17.0,16.0,10-26-26
+Tobacco,13.0,17.0,16.0,10-26-26
+Tobacco,4.0,17.0,17.0,10-26-26
+Tobacco,39.0,0.0,0.0,Urea
+Tobacco,4.0,17.0,17.0,10-26-26
+Tobacco,23.0,0.0,21.0,28-28
+Tobacco,11.0,0.0,37.0,DAP
+Tobacco,11.0,0.0,37.0,DAP
+Tobacco,11.0,0.0,37.0,DAP
+Tobacco,23.0,0.0,21.0,28-28
+Tobacco,39.0,0.0,0.0,Urea
+Tobacco,4.0,17.0,17.0,10-26-26
+Tobacco,39.0,0.0,0.0,Urea
+Tobacco,22.0,0.0,24.0,28-28
+Tobacco,22.0,0.0,24.0,28-28
+Tobacco,22.0,0.0,24.0,28-28
+Tobacco,39.0,0.0,0.0,Urea
+Watermelon,114.0,27.0,54.0,DAP
+Watermelon,92.0,8.0,54.0,DAP
+Watermelon,109.0,27.0,54.0,TSP
+Watermelon,110.0,10.0,54.0,TSP
+Watermelon,114.0,27.0,54.0,DAP
+Watermelon,92.0,8.0,54.0,DAP
+Watermelon,92.0,8.0,54.0,DAP
+Watermelon,110.0,10.0,54.0,TSP
+Watermelon,100.0,24.0,54.0,TSP
+Watermelon,92.0,8.0,54.0,DAP
+Watermelon,110.0,10.0,54.0,TSP
+Watermelon,114.0,27.0,54.0,DAP
+Watermelon,110.0,10.0,54.0,TSP
+Watermelon,109.0,27.0,54.0,TSP
+Watermelon,109.0,27.0,54.0,TSP
+Watermelon,100.0,24.0,54.0,TSP
+Watermelon,109.0,27.0,54.0,TSP
+Watermelon,114.0,27.0,54.0,DAP
+Watermelon,100.0,24.0,54.0,TSP
+Watermelon,100.0,24.0,54.0,TSP
+Wheat,12.0,18.0,19.0,10-26-26
+Wheat,12.0,18.0,19.0,10-26-26
+Wheat,39.0,0.0,0.0,Urea
+Wheat,23.0,0.0,19.0,28-28
+Wheat,23.0,0.0,19.0,28-28
+Wheat,23.0,0.0,19.0,28-28
+Wheat,8.0,8.0,28.0,14-35-14
+Wheat,8.0,8.0,28.0,14-35-14
+Wheat,8.0,8.0,28.0,14-35-14
+Wheat,13.0,0.0,36.0,DAP
+Wheat,39.0,0.0,0.0,Urea
+Wheat,38.0,0.0,0.0,Urea
+Wheat,41.0,0.0,0.0,Urea
+Wheat,23.0,0.0,19.0,28-28
+Wheat,12.0,18.0,19.0,10-26-26
+Wheat,8.0,8.0,28.0,14-35-14
+Wheat,38.0,0.0,0.0,Urea
+Wheat,12.0,18.0,19.0,10-26-26
+Wheat,13.0,0.0,36.0,DAP
+Wheat,13.0,0.0,36.0,DAP
+Wheat,13.0,0.0,9.0,20-20
+Wheat,13.0,0.0,9.0,20-20
+Wheat,13.0,0.0,9.0,20-20
+Wheat,23.0,0.0,19.0,28-28
+Wheat,41.0,0.0,0.0,Urea
+Wheat,23.0,0.0,19.0,28-28
+Wheat,23.0,0.0,19.0,28-28
+Wheat,13.0,0.0,9.0,20-20
+Wheat,23.0,0.0,19.0,28-28
+Wheat,41.0,0.0,0.0,Urea
+Wheat,41.0,0.0,0.0,Urea
+Wheat,13.0,0.0,36.0,DAP
+Wheat,38.0,0.0,0.0,Urea
+Wheat,38.0,0.0,0.0,Urea
+Wheat,39.0,0.0,0.0,Urea
+Wheat,39.0,0.0,0.0,Urea
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

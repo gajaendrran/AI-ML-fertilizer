@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 # Load Dataset
-file_path = "newdataset.csv"  # Make sure the file exists in the same folder
+file_path = "modified_dataset.csv"  # Make sure the file exists in the same folder
 data = pd.read_csv(file_path)
 
 # Encode Categorical Features
