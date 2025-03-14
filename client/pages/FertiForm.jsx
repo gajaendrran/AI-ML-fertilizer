@@ -1,34 +1,29 @@
 import { useState } from "react";
+import DropDown from "./DropDown.jsx";
 import axios from "axios";
 import { useSelector } from 'react-redux';
 import '../pagestyling/FertiForm.css';
 import Intro from './Intro.jsx'
+import crops from "../data/cropTypes";
 
-const Form = () => {
+const FertiForm = () => {
 
   const user = useSelector((state) => state.userInfo.user);
   const usertoken = user?.token;
 
   const [formData, setFormData] = useState({
     cropType: "",
-    nitrogen: "",
-    phosphorus: "",
-    potassium: "",
+    nitrogen: 0,
+    phosphorus: 0,
+    potassium: 0,
   });
 
   const [showForm, setShowForm] = useState(false);
-
   const [prediction, setPrediction] = useState("");
   const [description, setDescription] = useState("");
   const [showPdfButton, setShowPdfButton] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
   const [showPopup, setShowPopup] = useState(false);
-
-  // Options for dropdowns
-  const cropTypes = ['Barley', 'Coffee', 'Cotton', 'Ground Nuts', 'Kidneybeans', 'Maize', 'Millets', 
-    'Oil Seeds', 'Orange', 'Paddy', 'Pomegranate', 'Pulses', 'Rice', 'Sugarcane', 
-    'Tobacco', 'Watermelon', 'Wheat']
-   ;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -62,6 +57,15 @@ const Form = () => {
     }
   };
 
+  const handleBlockSelect = (npkValues) => {
+    setFormData({
+      ...formData,
+      nitrogen: npkValues.N || 0,
+      phosphorus: npkValues.P || 0,
+      potassium: npkValues.K || 0,
+    });
+  };
+
   const ToIntro = () => {
     setShowForm(false);
   }
@@ -71,24 +75,27 @@ const Form = () => {
       {!showForm ? (
         <>
           <Intro ToForm={() => setShowForm(true)} />
-          {console.log(showForm)}
         </>
       ) : (
         <div className="ferti-form-div">
           <h2>Fertilizer Recommendation</h2>
           <form onSubmit={handleSubmit} className="ferti-form">
+            <DropDown onBlockSelect={handleBlockSelect} /> 
+
             <select name="cropType" onChange={handleChange} required className="input">
               <option value="">Select Crop Type</option>
-              {cropTypes.map((crop) => (
+              {crops.map((crop) => (
                 <option key={crop} value={crop}>
                   {crop}
                 </option>
               ))}
             </select>
+
             <input
               type="number"
               name="nitrogen"
               placeholder="Nitrogen (N)"
+              value={formData.nitrogen}
               onChange={handleChange}
               required
               className="input"
@@ -97,6 +104,7 @@ const Form = () => {
               type="number"
               name="phosphorus"
               placeholder="Phosphorus (P)"
+              value={formData.phosphorus}
               onChange={handleChange}
               required
               className="input"
@@ -105,10 +113,12 @@ const Form = () => {
               type="number"
               name="potassium"
               placeholder="Potassium (K)"
+              value={formData.potassium}
               onChange={handleChange}
               required
               className="input"
             />
+
             <button type="submit" className="ferti-btn">Predict Fertilizer</button>
             <button onClick={ToIntro} className="ferti-btn">Back</button>
           </form>
@@ -131,4 +141,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FertiForm;
