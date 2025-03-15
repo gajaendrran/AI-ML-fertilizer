@@ -7,7 +7,7 @@ import Intro from './Intro.jsx'
 import crops from "../data/cropTypes";
 
 const FertiForm = () => {
-
+  const serverUrl = import.meta.env.VITE_SERVER_URL;
   const user = useSelector((state) => state.userInfo.user);
   const usertoken = user?.token;
 
@@ -33,7 +33,7 @@ const FertiForm = () => {
     e.preventDefault();
     try {
       const reqdata = { ...formData, usertoken };
-      const response = await axios.post("http://localhost:5001/predict", reqdata);
+      const response = await axios.post(`${serverUrl}/predict`, reqdata);
 
       console.log(response);
 
@@ -48,7 +48,7 @@ const FertiForm = () => {
         ${response.data.additionalTips}`
       );
 
-      setPdfUrl(`http://localhost:5001/download-pdf/${response.data.pdfid}`);
+      setPdfUrl(`${serverUrl}/download-pdf/${response.data.pdfid}`);
 
       setShowPopup(true);
       setShowPdfButton(true);
