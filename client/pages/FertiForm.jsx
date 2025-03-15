@@ -4,7 +4,7 @@ import axios from "axios";
 import { useSelector } from 'react-redux';
 import '../pagestyling/FertiForm.css';
 import Intro from './Intro.jsx'
-import crops from "../data/cropTypes";
+import crops from "../data/CropTypes";
 
 const FertiForm = () => {
   const serverUrl = import.meta.env.VITE_SERVER_URL;
