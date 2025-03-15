@@ -198,10 +198,6 @@
     justify-content: center;
     background-color: #F1F1F1;
 }
-      
-  
-
-
   @media (max-width: 768px) {
     .about {
       flex-direction: column;

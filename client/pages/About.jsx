@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import "../pagestyling/About.css"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import img from '../image/aboutferti(1).webp';
 const About = () => {
 
   const captions = [
@@ -53,7 +54,7 @@ const About = () => {
             </p>
           </div>
           <div className='about-mission2'>
-            <img src="../image/aboutferti(1).webp" alt="photo" />
+            <img src={img} alt="img" />
           </div>
         </div>
       </div>
