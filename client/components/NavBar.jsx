@@ -47,12 +47,6 @@ const NavBar = () => {
             {active === 'history' && <span>History</span>}
           </Link>
         </li>
-        <li className={active === "notify" ? "active" : ""} onClick={() => handleClick('notify')}>
-          <Link to="/notify" className="nav-link">
-          <FaBell />
-            {active === 'notify' && <span>Notify</span>}
-          </Link>
-        </li>
         <li className={active === "about" ? "active" : ""} onClick={() => handleClick('about')}>
           <Link to="/about" className="nav-link">
           <FaInfoCircle />
