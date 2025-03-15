@@ -9,7 +9,10 @@ const connectDB = require('./db/connect');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    { origin: ['http://localhost:5173', 'https://smarfert.vercel.app/'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true}));
 
 
 connectDB();
