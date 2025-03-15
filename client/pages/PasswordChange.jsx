@@ -6,6 +6,7 @@ import {sendPasswordResetEmail} from 'firebase/auth';
 import '../pagestyling/PasswordChange.css';
 
 const PasswordChange = () => {
+    const serverUrl = import.meta.env.VITE_SERVER_URL;
     const navigate = useNavigate();
     const userMail = useRef();
 
@@ -17,7 +18,7 @@ const PasswordChange = () => {
         try{
             if(mail)
                 await sendPasswordResetEmail(auth,mail,{
-                    url: "http://localhost/password-reset",
+                    url: `${serverUrl}/password-reset`,
                     handleCodeInApp: true,
                 });
         }
