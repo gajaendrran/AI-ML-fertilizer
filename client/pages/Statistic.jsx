@@ -7,9 +7,9 @@ const Statistic = () => {
   const [selectedLocation, setSelectedLocation] = useState({
     district: "",
     block: "",
-    N: 45,
-    P: 25,
-    K: 30,
+    N: 19.4,
+    P: 38.8,
+    K: 41.8,
   });
 
   const handleBlockSelect = ({ district, block, N, P, K }) => {
