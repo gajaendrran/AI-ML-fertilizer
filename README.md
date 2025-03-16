@@ -24,15 +24,14 @@ History Tracking: Access past recommendations anytime for better decision-making
 
 🛠 Technology Stack :
 
-Frontend: React (Vite)
+Frontend: React Js
 
 Backend: Node.js & Express
 
-Database: MongoDB
+Database: MongoDB & Firebase
 
-Machine Learning: Python (scikit-learn, TensorFlow)
+Machine Learning: Python 
 
-Other: Axios (API calls), PDFKit (report generation)
 
 
 🌍 Current & Future Scope :
