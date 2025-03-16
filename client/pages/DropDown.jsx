@@ -38,11 +38,10 @@ const DropDown = ({ onBlockSelect }) => {
         const blockDocSnap = await getDoc(blockDocRef);
 
         if (blockDocSnap.exists()) {
-            console.log(blockDocSnap.data());
           const { N, P, K } = blockDocSnap.data();
-          onBlockSelect({ N, P, K });
+          onBlockSelect({ district: selectedDistrict, block: selectedBlock, N, P, K });
         } else {
-          onBlockSelect({ N: 0, P: 0, K: 0 });
+          onBlockSelect({ district: selectedDistrict, block: selectedBlock, N: 0, P: 0, K: 0 });
         }
       } catch (error) {
         console.error("Error fetching NPK values:", error);
@@ -54,7 +53,6 @@ const DropDown = ({ onBlockSelect }) => {
 
   return (
     <>
-      {/* District Selection */}
       <select
         className="input"
         required
@@ -69,7 +67,6 @@ const DropDown = ({ onBlockSelect }) => {
         ))}
       </select>
 
-      {/* Block Selection */}
       <select
         className="input"
         required

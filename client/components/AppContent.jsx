@@ -8,7 +8,7 @@ import PasswordChange from '../pages/PasswordChange';
 import PasswordReset from '../pages/PasswordReset';
 import ProtectedNavBar from './ProtectedNavBar';
 import History from '../pages/History';
-import Contact from '../pages/Contact';
+import Statistic from '../pages/Statistic';
 import About from '../pages/About';
 
 const ProtectedRoute = ({ children }) => {
@@ -34,7 +34,7 @@ const AppContent = () => {
             <Route element={<ProtectedNavBar />}>
                 <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
                 <Route path="/history" element={<ProtectedRoute><History /></ProtectedRoute>} />
-                <Route path="/notify" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
+                <Route path="/statistic" element={<ProtectedRoute><Statistic /></ProtectedRoute>} />
                 <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
             </Route>
         </Routes>

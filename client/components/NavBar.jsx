@@ -47,12 +47,18 @@ const NavBar = () => {
             {active === 'history' && <span>History</span>}
           </Link>
         </li>
+        <li className={active === "statistic" ? "active" : ""} onClick={() => handleClick('statistic')}>
+          <Link to="/statistic" className="nav-link">
+          <FaInfoCircle />
+            {active === 'statistic' && <span>Statistics</span>}
+          </Link>
+        </li>
         <li className={active === "about" ? "active" : ""} onClick={() => handleClick('about')}>
           <Link to="/about" className="nav-link">
           <FaInfoCircle />
             {active === 'about' && <span>About</span>}
           </Link>
-        </li>
+        </li>   
         <li>
           <button className="logout-btn" onClick={logOut}>
             <FaSignOutAlt />
