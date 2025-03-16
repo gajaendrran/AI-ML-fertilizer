@@ -32,7 +32,7 @@ const Statistic = () => {
       <p className="stat-dec">Here, you can explore the Nitrogen (N), Phosphorous (P), and Potassium (K) distribution in different districts and blocks.
       Start by selecting a district and block to see real-time data insights! 
       </p>
-      <h2>Select Location</h2>
+      <h2 className="stat-head">Select Location</h2>
       <DropDown onBlockSelect={handleBlockSelect} />
 
       <div className="stat-outer">

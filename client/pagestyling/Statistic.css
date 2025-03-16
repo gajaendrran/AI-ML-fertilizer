@@ -9,10 +9,11 @@
     color: #444;
   }
 
-  h2 {
+  .stat-head {
     font-size: 20px;
     margin-bottom: 10px;
     color: #666666;
+    margin-bottom: 20px;
   }
   
 
@@ -49,6 +50,17 @@
     color: #444;
     margin-top: 15px;
   }
+  .statistic{
+    animation: fadeIn 1.9s;
+  }
+  @keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
   @media (max-width: 600px) {
     .stat-main {

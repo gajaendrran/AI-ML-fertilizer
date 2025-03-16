@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { signOut } from 'firebase/auth';
 import { auth } from '../config/firebasecon';
 import { Link } from 'react-router-dom';
-import { FaHome, FaBook, FaInfoCircle, FaSignOutAlt, FaBell } from 'react-icons/fa';
+import { FaHome, FaBook, FaInfoCircle, FaSignOutAlt, FaChartBar } from 'react-icons/fa';
 import '../pagestyling/NavBar.css';
 
 const NavBar = () => {
@@ -49,7 +49,7 @@ const NavBar = () => {
         </li>
         <li className={active === "statistic" ? "active" : ""} onClick={() => handleClick('statistic')}>
           <Link to="/statistic" className="nav-link">
-          <FaInfoCircle />
+          <FaChartBar />
             {active === 'statistic' && <span>Statistics</span>}
           </Link>
         </li>

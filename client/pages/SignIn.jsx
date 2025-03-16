@@ -51,7 +51,6 @@ const SignIn = () => {
     <div>
       {method === "load" &&
         <div className="parent-loading">
-          <h2>Loading...</h2>
           <div class="loadingspinner">
             <div id="square1"></div>
             <div id="square2"></div>
