@@ -63,10 +63,10 @@ async function generatepdf(cropobj) {
         doc.fontSize(14).text("Additional Tips for Optimal Yield:", { underline: true });
         doc.moveDown();
         doc.fontSize(12).text(`- ${cropobj.additionalTips.split('. ').join('\n- ')}`); // Formats tips as bullet points
-        doc.moveDown(2);
+        doc.moveDown(4);
 
         // Footer
-        doc.fontSize(12).text(`Generated on: ${new Date().toLocaleDateString()}`, { align: "right" });
+        doc.fontSize(12).text(`Generated on: ${new Date().toLocaleDateString("en-GB")}`, { align: "right" });
 
         // Finalize PDF
         doc.end();
