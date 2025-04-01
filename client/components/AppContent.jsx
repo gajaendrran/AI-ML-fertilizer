@@ -10,6 +10,7 @@ import ProtectedNavBar from './ProtectedNavBar';
 import History from '../pages/History';
 import Statistic from '../pages/Statistic';
 import About from '../pages/About';
+import NotFoundPage from './NotFoundPage';
 
 const ProtectedRoute = ({ children }) => {
     const globalUser = useSelector((state) => state.userInfo.user);
@@ -31,12 +32,16 @@ const AppContent = () => {
             <Route path="/password-change" element={<PasswordChange />} />
             <Route path="/password-reset" element={<PasswordReset />} />
 
+
             <Route element={<ProtectedNavBar />}>
                 <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
                 <Route path="/history" element={<ProtectedRoute><History /></ProtectedRoute>} />
                 <Route path="/statistic" element={<ProtectedRoute><Statistic /></ProtectedRoute>} />
                 <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
             </Route>
+
+            <Route path = "*" element={<NotFoundPage/>}/>
+
         </Routes>
     );
 };
