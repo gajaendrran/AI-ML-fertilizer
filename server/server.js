@@ -10,12 +10,12 @@ const connectDB = require('./db/connect');
 const app = express();
 app.use(express.json());
 app.use(cors(
-    { origin: ['http://localhost:5173', 'https://smarfert.vercel.app'],
+    { origin: ['http://localhost:5173', 'https://smartfert.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true}));
 
 
-connectDB();
+connectDB();    
 app.use('/predict', predictRoutes);
 app.use('/download-pdf',pdfRoutes);
 app.use('/history', historyRoutes);
