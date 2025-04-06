@@ -155,7 +155,7 @@
     @media (max-width: 1300px) {
       .ferti-form {
         width: 80%;
-        padding: 40px;
+        padding:40px;
       }
     }
     
@@ -218,26 +218,30 @@
       .popup-content {
         width: 60%;
         height: 60%;
+        padding: 10%;
       }
-    
+      .close-btn {
+        position: relative;
+        bottom: 100px; 
+        right: 40px;
+      }
       .download-btn {
         margin-bottom: 120px;
       }
     
-      .close-btn {
-        margin-right: 60px;
-        margin-bottom: 200px;
-      }
+      
+      
     }
     
      
     @media (min-width: 0px) and (max-width: 325px) {
       .popup-content {
-        height: 70%;
+        margin-top: 40%;
+        height: 65%;
       }
     
       .close-btn {
-        margin-right: 80px;
+        margin-right: 100px;
       }
     }
     
