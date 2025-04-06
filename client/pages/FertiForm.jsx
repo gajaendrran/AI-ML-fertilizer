@@ -9,17 +9,20 @@ import crops from "../data/CropTypes";
 
 const FertiForm = () => {
 
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, []);
-
-
   const serverUrl = import.meta.env.VITE_SERVER_URL;
   const user = useSelector((state) => state.userInfo.user);
   const usertoken = user?.token;
+
+  useEffect(() => {
+    // Disable scroll when this component is mounted
+    document.body.style.overflow = 'hidden';
+  
+    return () => {
+      // Re-enable scroll when this component unmounts
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+  
 
   const [formData, setFormData] = useState({
     cropType: "",
@@ -79,9 +82,13 @@ const FertiForm = () => {
   const ToIntro = () => {
     setShowForm(false);
   }
-
+  
   return (
     <>
+   
+      
+      
+    
       {!showForm ? (
         <>
           <Intro ToForm={() => setShowForm(true)} />
@@ -147,7 +154,9 @@ const FertiForm = () => {
           )}
         </div>
       )}
-    </>
+   
+      </>
+    
   );
 };
 
