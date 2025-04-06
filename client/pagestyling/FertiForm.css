@@ -171,7 +171,7 @@
     
       .popup-content {
         width: 50%;
-        height: auto;
+        height: 45%;
       }
     
       .close-btn {
@@ -217,7 +217,7 @@
     
       .popup-content {
         width: 60%;
-        height: auto;
+        height: 60%;
       }
     
       .download-btn {
@@ -226,15 +226,14 @@
     
       .close-btn {
         margin-right: 60px;
-       
-        margin-bottom: 90px;
+        margin-bottom: 200px;
       }
     }
     
      
     @media (min-width: 0px) and (max-width: 325px) {
       .popup-content {
-        height: auto;
+        height: 70%;
       }
     
       .close-btn {
