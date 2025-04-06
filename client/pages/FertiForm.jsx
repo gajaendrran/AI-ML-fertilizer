@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import DropDown from "./DropDown.jsx";
 import axios from "axios";
 import { useSelector } from 'react-redux';
@@ -7,6 +8,15 @@ import Intro from './Intro.jsx'
 import crops from "../data/CropTypes";
 
 const FertiForm = () => {
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
+
   const serverUrl = import.meta.env.VITE_SERVER_URL;
   const user = useSelector((state) => state.userInfo.user);
   const usertoken = user?.token;
