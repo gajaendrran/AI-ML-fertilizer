@@ -1,5 +1,4 @@
 
-
 .intro {
     display: flex;
     justify-content: center;
@@ -113,6 +112,7 @@
     .contents h1 {
         font-size: 1.8rem;
         margin-top: 65%;
+        margin-right: 29%;
     }
 
     .smart {
@@ -128,7 +128,8 @@
     .intro-btn {
         font-size: 1rem;
         padding: 10px 20px;
-        margin-bottom: 30%;
+        position: absolute;
+        bottom: 10%;
     }
 }
 
