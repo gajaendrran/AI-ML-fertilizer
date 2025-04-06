@@ -14,14 +14,17 @@ const FertiForm = () => {
   const usertoken = user?.token;
 
   useEffect(() => {
-    // Disable scroll when this component is mounted
+    
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   
     return () => {
-      // Re-enable scroll when this component unmounts
+      
       document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
     };
   }, []);
+  
   
 
   const [formData, setFormData] = useState({
