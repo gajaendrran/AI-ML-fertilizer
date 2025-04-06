@@ -1,3 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    height: 100%;
+  }
+  
+
 .intro {
     display: flex;
     justify-content: center;
@@ -96,6 +104,7 @@
 
 @media (max-width: 576px) {
     .intro-div {
+        padding:40%;
         height: 100vh;
         padding: 40px;
         background-image: url('../image/smartfert-intro.jpg');
@@ -109,6 +118,7 @@
 
     .contents h1 {
         font-size: 1.8rem;
+        margin-top: 40%;
     }
 
     .smart {
