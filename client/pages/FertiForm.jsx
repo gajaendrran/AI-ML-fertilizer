@@ -13,9 +13,9 @@ const FertiForm = () => {
 
   const [formData, setFormData] = useState({
     cropType: "",
-    nitrogen: 0,
-    phosphorus: 0,
-    potassium: 0,
+    nitrogen: "",
+    phosphorus: "",
+    potassium: "",
   });
 
   const [showForm, setShowForm] = useState(false);
@@ -94,7 +94,7 @@ const FertiForm = () => {
             <input
               type="number"
               name="nitrogen"
-              placeholder="Nitrogen (N)"
+              placeholder="Available Nitrogen (N) (kg/ha)"
               value={formData.nitrogen}
               onChange={handleChange}
               required
@@ -103,7 +103,7 @@ const FertiForm = () => {
             <input
               type="number"
               name="phosphorus"
-              placeholder="Phosphorus (P)"
+              placeholder="Available Phosphorus (P) (kg/ha)"
               value={formData.phosphorus}
               onChange={handleChange}
               required
@@ -112,7 +112,7 @@ const FertiForm = () => {
             <input
               type="number"
               name="potassium"
-              placeholder="Potassium (K)"
+              placeholder="Available Potassium (K) (kg/ha)"
               value={formData.potassium}
               onChange={handleChange}
               required

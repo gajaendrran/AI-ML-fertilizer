@@ -59,16 +59,11 @@ const SignIn = () => {
             <div id="square5"></div>
           </div>
         </div>}
-
-
       {!method && (
         <div className='main'>
           <div className='div-1'>
             <h1 className='heading' >Welcome to <span className="typing">Smart-Fert</span></h1>
-
           </div>
-
-
           <div className='div-2'>
             <div className='signin'>
               <h2 className='signin-text'>Sign In </h2>
