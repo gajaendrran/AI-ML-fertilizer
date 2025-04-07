@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import DropDown from "./DropDown.jsx";
 import axios from "axios";
 import { useSelector } from 'react-redux';
@@ -7,9 +8,24 @@ import Intro from './Intro.jsx'
 import crops from "../data/CropTypes";
 
 const FertiForm = () => {
+
   const serverUrl = import.meta.env.VITE_SERVER_URL;
   const user = useSelector((state) => state.userInfo.user);
   const usertoken = user?.token;
+
+  useEffect(() => {
+    
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+  
+    return () => {
+      
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    };
+  }, []);
+  
+  
 
   const [formData, setFormData] = useState({
     cropType: "",
@@ -69,9 +85,13 @@ const FertiForm = () => {
   const ToIntro = () => {
     setShowForm(false);
   }
-
+  
   return (
     <>
+   
+      
+      
+    
       {!showForm ? (
         <>
           <Intro ToForm={() => setShowForm(true)} />
@@ -137,7 +157,9 @@ const FertiForm = () => {
           )}
         </div>
       )}
-    </>
+   
+      </>
+    
   );
 };
 

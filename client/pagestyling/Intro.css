@@ -1,3 +1,4 @@
+
 .intro {
     display: flex;
     justify-content: center;
@@ -87,6 +88,7 @@
 
 @media (max-width: 576px) {
     .intro-div {
+        padding:40%;
         height: 100vh;
         padding: 40px;
         background-image: url('../image/smartfert-intro.jpg');
@@ -100,6 +102,8 @@
 
     .contents h1 {
         font-size: 1.8rem;
+        margin-top: 65%;
+        margin-right: 29%;
     }
 
     .smart {
@@ -115,6 +119,8 @@
     .intro-btn {
         font-size: 1rem;
         padding: 10px 20px;
+        position: absolute;
+        bottom: 10%;
     }
 }
 
