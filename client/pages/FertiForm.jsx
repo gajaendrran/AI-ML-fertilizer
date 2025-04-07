@@ -88,20 +88,16 @@ const FertiForm = () => {
   
   return (
     <>
-   
-      
-      
-    
       {!showForm ? (
         <>
           <Intro ToForm={() => setShowForm(true)} />
         </>
       ) : (
         <div className="ferti-form-div">
-          <h2>Fertilizer Recommendation</h2>
           <form onSubmit={handleSubmit} className="ferti-form">
+                <h2>Fertilizer Recommendation</h2>
+            <div className="f-form">
             <DropDown onBlockSelect={handleBlockSelect} /> 
-
             <select name="cropType" onChange={handleChange} required className="input">
               <option value="">Select Crop Type</option>
               {crops.map((crop) => (
@@ -110,7 +106,6 @@ const FertiForm = () => {
                 </option>
               ))}
             </select>
-
             <input
               type="number"
               name="nitrogen"
@@ -141,8 +136,8 @@ const FertiForm = () => {
 
             <button type="submit" className="ferti-btn">Predict Fertilizer</button>
             <button onClick={ToIntro} className="ferti-btn">Back</button>
+            </div>
           </form>
-
           {showPopup && (
             <div className="popup-overlay">
               <div className="popup-content">

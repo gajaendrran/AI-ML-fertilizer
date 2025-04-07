@@ -30,18 +30,18 @@ const Statistic = () => {
   return (
     <div className="statistic">
       <p className="stat-dec">Here, you can explore the Nitrogen (N), Phosphorous (P), and Potassium (K) distribution in different districts and blocks.
-      Start by selecting a district and block to see real-time data insights! 
+      <br />Start by selecting a district and block to see real-time data insights! 
       </p>
       <h2 className="stat-head">Select Location</h2>
-      <DropDown onBlockSelect={handleBlockSelect} />
-
+      <div className="stat-input">
+        <DropDown onBlockSelect={handleBlockSelect}/>
+      </div>
       <div className="stat-outer">
       <div className="stat-main">
         <div className="stat-dis">
         {selectedLocation.district && <h3>District: {selectedLocation.district}</h3>}
         {selectedLocation.block && <h3>Block: {selectedLocation.block}</h3>}
         </div>
-
         <div className="chart">
         <MyPieChart
           data={[
@@ -51,7 +51,6 @@ const Statistic = () => {
           ]}
         />
         </div>
-
         {!selectedLocation.district && <h3>Tamil Nadu</h3>}
       </div>
       </div>

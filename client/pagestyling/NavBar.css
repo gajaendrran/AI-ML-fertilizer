@@ -26,8 +26,6 @@ body{
 .navbar h2 {
     font-size: 24px;
     margin: 0;
-    animation: fadeIn 1.3s ease-in-out infinite alternate;
-
 }
 .navbar-nav {
     display: flex;
@@ -115,7 +113,6 @@ body{
     .navbar-nav li {
         margin: 0 17px;
     }
-
     .navbar h2 {
         margin-top: 10px;
         text-align: center;
