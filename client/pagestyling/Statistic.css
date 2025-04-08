@@ -1,6 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .statistic {
     text-align: center;
-    padding: 20px;
+    padding: 8px;
   }
   .stat-dec {
     font-size: 18px;
@@ -34,10 +38,10 @@
     max-width: 450px;
   }
   .stat-dis h3 {
-    font-size: 16px;
+    font-size: 15px;
     color: #333;
-    margin: 5px 0;
     font-weight: 500;
+
   }
   .chart {
     display: flex;
@@ -45,9 +49,9 @@
     align-items: center;
   }
   .stat-main h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: #444;
-    margin-top: 15px;
+    margin-top: 0px;
   }
   .statistic{
     animation: fadeIn 1.9s;
@@ -67,7 +71,7 @@
       padding: 15px;
     }
     .stat-dis h3 {
-      font-size: 16px;
+      font-size: 14px;
     }
     .chart {
       width: 100%;

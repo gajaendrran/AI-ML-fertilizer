@@ -39,8 +39,8 @@ const Statistic = () => {
       <div className="stat-outer">
       <div className="stat-main">
         <div className="stat-dis">
-        {selectedLocation.district && <h3>District: {selectedLocation.district}</h3>}
-        {selectedLocation.block && <h3>Block: {selectedLocation.block}</h3>}
+        {selectedLocation.district && <h3><b>District:</b> {selectedLocation.district}</h3>}
+        {selectedLocation.block && <h3><b>Block:</b> {selectedLocation.block}</h3>}
         </div>
         <div className="chart">
         <MyPieChart
