@@ -32,6 +32,15 @@ async function generatepdf(cropobj) {
             reject(err);
         });
 
+        const pageWidth = doc.page.width;
+        const pageHeight = doc.page.height;
+        const margin = 20;
+
+        doc.rect(margin, margin, pageWidth - 2 * margin, pageHeight - 2 * margin)
+           .strokeColor('#000000')
+           .lineWidth(1)
+           .stroke();
+
         // Title
         doc.fontSize(18).text("Fertilizer Recommendation Report", { align: "center", underline: true });
         doc.moveDown(2);
