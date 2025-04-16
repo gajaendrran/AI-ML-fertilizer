@@ -9,14 +9,21 @@ async function generatepdf(cropobj) {
         doc.on("data", (chunk) => buffers.push(chunk));
         doc.on("end", async () => {
             const pdfBuffer = Buffer.concat(buffers);
-
-            const pdf = new pdfModel({
-                userId: cropobj.userId,
-                shortContent: `For ${cropobj.cropType}, 
+            let des = "";
+            if (cropobj.fertilizer === "Well Balanced Soil") {
+                des = `${cropobj.irrigation} 
+                ${cropobj.additionalTips}`
+            }
+            else {
+                des = `For ${cropobj.cropType}, 
                 the recommended fertilizer is ${cropobj.fertilizer}, 
                 applied over a period of ${cropobj.days} days. 
                 ${cropobj.irrigation} 
-                ${cropobj.additionalTips}`,
+                ${cropobj.additionalTips}`
+            }
+            const pdf = new pdfModel({
+                userId: cropobj.userId,
+                shortContent: des,
                 pdfData: pdfBuffer
             });
 
@@ -37,9 +44,9 @@ async function generatepdf(cropobj) {
         const margin = 20;
 
         doc.rect(margin, margin, pageWidth - 2 * margin, pageHeight - 2 * margin)
-           .strokeColor('#000000')
-           .lineWidth(1)
-           .stroke();
+            .strokeColor('#000000')
+            .lineWidth(1)
+            .stroke();
 
         // Title
         doc.fontSize(18).text("Fertilizer Recommendation Report", { align: "center", underline: true });
@@ -48,19 +55,24 @@ async function generatepdf(cropobj) {
         // Crop Details
         doc.fontSize(14).text(`Crop Type: ${cropobj.cropType}`);
         doc.moveDown();
-        doc.text(`Recommended Fertilizer: ${cropobj.fertilizer}`);
-        doc.moveDown();
-        doc.text(`Days to Apply: ${cropobj.days}`);
-        doc.moveDown(2);
-
-        // Description
-        doc.fontSize(14).text("Description:", { underline: true });
-        doc.moveDown();
-        doc.fontSize(12).text(
-            `For ${cropobj.cropType}, the recommended fertilizer is ${cropobj.fertilizer}, ` +
-            `applied over a period of ${cropobj.days} days.`
-        );
-        doc.moveDown(2);
+        if (cropobj.fertilizer !== "Well Balanced Soil") {
+            doc.text(`Recommended Fertilizer: ${cropobj.fertilizer}`);
+            doc.moveDown();
+            doc.text(`Days to Apply: ${cropobj.days}`);
+            doc.moveDown(2);
+            // Description
+            doc.fontSize(14).text("Description:", { underline: true });
+            doc.moveDown();
+            doc.fontSize(12).text(
+                `For ${cropobj.cropType}, the recommended fertilizer is ${cropobj.fertilizer}, ` +
+                `applied over a period of ${cropobj.days} days.`
+            );
+            doc.moveDown(2);
+        }
+        else {
+            doc.text(`Well Balanced Soil`);
+            doc.moveDown(2);
+        }
 
         // Irrigation
         doc.fontSize(14).text("Irrigation Method:", { underline: true });

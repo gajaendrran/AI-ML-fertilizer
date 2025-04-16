@@ -55,15 +55,25 @@ const FertiForm = () => {
 
       setPrediction(response.data.fertilizer);
 
-      setDescription(
-        `For ${formData.cropType}, 
-        The ${response.data.fertilizer} fertilizer is recommended, 
-        applied at ${response.data.percentage}% of the total amount 
-        for the first application, over a period of ${response.data.days} days. 
-        ${response.data.irrigation} 
-        ${response.data.additionalTips}`
-      );
-
+      if(response.data.fertilizer === "Well Balanced Soil"){
+        setDescription(
+          `${response.data.irrigation} 
+          ${response.data.additionalTips}`
+        );
+      }
+      else
+      {
+        setDescription(
+          `For ${formData.cropType}, 
+          The ${response.data.fertilizer} fertilizer is recommended, 
+          applied at ${response.data.percentage}% of the total amount 
+          for the first application, over a period of ${response.data.days} days. 
+          ${response.data.irrigation} 
+          ${response.data.additionalTips}`
+        );
+  
+      }
+      
       setPdfUrl(`${serverUrl}/download-pdf/${response.data.pdfid}`);
 
       setShowPopup(true);
@@ -141,7 +151,11 @@ const FertiForm = () => {
           {showPopup && (
             <div className="popup-overlay">
               <div className="popup-content">
-                <h3>Recommended Fertilizer: {prediction}</h3>
+                {(prediction === "Well Balanced Soil") ?
+                         <h3>Well Balanced Soil</h3>
+                    :
+                      <h3>Recommended Fertilizer: {prediction}</h3>
+                }
                 <p>{description}</p>
                 <a href={pdfUrl} download>
                   <button className="download-btn">Download PDF</button>

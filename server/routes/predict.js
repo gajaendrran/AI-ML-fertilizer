@@ -4,6 +4,7 @@ const router = express.Router();
 const cropTips = require('../cropdetails/crops');
 const generatepdf = require('../functions/generatepdf');
 const verifyToken = require('../functions/verifyToken');
+const balancefert = require('../functions/balancefert');
 
 let pythonProcess = null;
 
@@ -24,6 +25,27 @@ function startPythonProcess() {
 }
 
 startPythonProcess();
+
+function check(balanced)
+{
+    const fert = [];
+    if(balanced.fixedFertilizer.appliedKgPerHa > 0)
+    {
+        fert.push({
+            fertname:balanced.fixedFertilizer.name,
+            proposition:balanced.fixedFertilizer.appliedKgPerHa
+
+        });
+    } 
+    let valueString = "";
+    fert.forEach((val)=>{
+        valueString += val.fertname + " " + val.proposition + " " + "kg/ha";
+    }) 
+    balanced.suggestions.forEach((val) => {
+        valueString += " " + val.name + " " + val.requiredKgPerHa + " " + "kg/ha";
+    })
+    return valueString === "" ? "Well Balanced Soil" : valueString;
+}
 
 router.post('/', async (req, res) => {
     try {
@@ -62,12 +84,20 @@ router.post('/', async (req, res) => {
 
         console.log(output);
 
+        const mainfert = output;
+        const balanced = balancefert(mainfert,
+                        cropType,
+                        parseFloat(nitrogen),
+                        parseFloat(phosphorus),
+                        parseFloat(potassium)
+                    );
+
         const cropData = cropTips[cropType];
 
         cropobj = {
             cropType:cropType,
             userId: useruid,
-            fertilizer: output,
+            fertilizer: check(balanced),
             percentage: cropData.percentage,
             irrigation: cropData.irrigation,
             additionalTips: cropData.additionalTips,
@@ -76,16 +106,10 @@ router.post('/', async (req, res) => {
         
         const pdfid = await generatepdf(cropobj);
 
-        resobj = {
-            pdfid: pdfid,
-            cropType:cropType,
-            fertilizer: output,
-            percentage: cropData.percentage,
-            irrigation: cropData.irrigation,
-            additionalTips: cropData.additionalTips,
-            days: cropData.days
+        resobj = {...cropobj,
+            pdfid: pdfid
         }
-
+        console.log(resobj);
         res.json(resobj);
 
     } catch (error) {

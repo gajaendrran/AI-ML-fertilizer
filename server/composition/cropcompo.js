@@ -16,4 +16,4 @@
     Watermelon: {N: 200, P:100, K:100},
     Wheat: {N: 120, P:40, K:40}
  };
- modules.exports = cropcompositons;
+ module.exports = cropcompositons;

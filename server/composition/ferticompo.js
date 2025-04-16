@@ -16,4 +16,6 @@ const fertilizerCompositions = {
     "28-28": { N: 28, P: 28, K: 0 }
 };
 
-modules.exports = fertilizerCompositions;
+module.exports = fertilizerCompositions;
+
+
