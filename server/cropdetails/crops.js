@@ -21,7 +21,7 @@ const cropTips = {
     days: 25,
     percentage: 30,
     irrigation: "Groundnuts require light irrigation during early growth. Ensure adequate moisture during flowering and pod formation.",
-    additionalTips: "Prevent waterlogging, which can lead to fungal diseases. Rotate with legumes for soil improvement.",
+    additionalTips: "Prevent waterlogging, which can lead to fungal diseases. Rotate with legumes for soil improvement.Use the Gypsum 5kg/ha",
   },
   Kidneybeans: {
     days: 25,
